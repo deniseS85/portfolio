@@ -1,9 +1,14 @@
 header {
-    background-color: #141D2F;
-    padding: 20px 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 100px;
+    background-color: #141D2F;
+    z-index: 999;
 
     img {
         width: 150px;
@@ -43,6 +48,11 @@ header {
             }
         }
     }
+}
+
+.active {
+    border-bottom: 4px solid #9747FF;
+    color: #1CDAE6;
 }
 
 

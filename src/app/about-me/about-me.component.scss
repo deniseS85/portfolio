@@ -1,0 +1,72 @@
+.about-me-section { 
+    margin-top: 114px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile {
+    width: 578px;
+    height: 510px;
+    position: relative;
+
+    img:nth-child(1) {
+        width: 424px;
+        position: absolute;
+        left: 0;
+        top: 95px;
+        z-index: -1;
+    }
+    img:nth-child(2) {
+        width: 515px;
+        position: absolute;
+        right: -136px;
+        top: 95px;
+        z-index: -1;
+    }
+    img:nth-child(3) {
+        width: 400px;
+        margin-left: 88px;
+        z-index: 1;
+        position: absolute;
+    }
+}
+
+.info-profile {
+    cursor: default;
+    display: flex;
+    margin-top: 40px;
+}
+
+.pretext-info-profile {
+    color: #FFFFFF;
+    font-size: 64px;
+    writing-mode: vertical-rl;
+    transform:rotate(180deg); 
+    margin-right: 8px;
+    line-height: 77px;
+    letter-spacing: 6px;
+}
+
+.subinfo-profile {
+    display: flex;
+    flex-direction: column;
+    div:nth-child(1) {
+        color: #FFFFFF;
+        font-size: 88px;
+        font-weight: bold;
+        line-height: 108px;
+    }
+    div:nth-child(2) {
+        color: #9747FF;
+        font-size: 57px;
+        line-height: 46px;
+        padding-top: 8px;
+    }
+}
+
+.banner {
+    position: absolute;
+    top: 241px;
+    left: 0;
+    right: 0;
+}
