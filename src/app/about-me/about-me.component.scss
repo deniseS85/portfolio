@@ -118,7 +118,6 @@
                 margin-top: 10px;
             }
         }
-       
         .info-icons {
             display: flex;
             align-items: center;
@@ -148,7 +147,7 @@
 }
 
 .scroll-down-shadow {
-    width: 296px;
+    width: 250px;
     position: absolute;
     top: 700px;
     right: 0;
@@ -161,7 +160,8 @@
     margin-right: -68px;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* #141D2F; */
+    background-color: #141D2F;
+    align-items: center;
     z-index: 1;
     .profile-round {
         width: 409px;
@@ -210,5 +210,6 @@
         }
     }
 }
+
 
 
