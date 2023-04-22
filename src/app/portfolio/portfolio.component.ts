@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class PortfolioComponent {
 
+  projects = [
+    { image: '', title: '', languages: '', description: '' },
+    { image: '', title: '', languages: '', description: '' },
+    { image: '', title: '', languages: '', description: '' },
+    { image: '', title: '', languages: '', description: '' },
+    { image: '', title: '', languages: '', description: '' },
+  ];
+
 }
