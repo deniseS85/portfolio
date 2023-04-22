@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-skills.component.scss']
 })
 export class MySkillsComponent {
-  skillsNames = ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'Firebase', 'GIT', 
-                'CSS', 'Rest-Api', 'Scrum', 'Material Design'];
-  skillsIcons = ['angular-icon.png', 'typescript-icon.png', 'javascript-icon.png',
-                'html-icon.png', 'firebase-icon.png', 'git-icon.png', 'css-icon.png',
-                'rest-api-icon.png', 'scrum-icon.png', 'material-design-icon.png'];
-
+  skills = [
+    { name: 'Angular', icon: 'angular-icon.png' },
+    { name: 'TypeScript', icon: 'typescript-icon.png' },
+    { name: 'JavaScript', icon: 'javascript-icon.png' },
+    { name: 'HTML', icon: 'html-icon.png' },
+    { name: 'Firebase', icon: 'firebase-icon.png' },
+    { name: 'GIT', icon: 'git-icon.png' },
+    { name: 'CSS', icon: 'css-icon.png' },
+    { name: 'Rest-Api', icon: 'rest-api-icon.png' },
+  ];
 }

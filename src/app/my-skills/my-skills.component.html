@@ -1,36 +1,8 @@
 <div class="my-skills-container">
     <div class="skills-icons">
-        <div class="icons">
-            <img src="assets/img/angular-icon.png">
-            <div>Angular</div>
-        </div>
-        <div class="icons">
-            <img src="assets/img/typescript-icon.png">
-            <div>TypeScript</div>
-        </div>
-        <div class="icons">
-            <img src="assets/img/javascript-icon.png">
-            <div>JavaScript</div>
-        </div>
-        <div class="icons">
-            <img src="assets/img/html-icon.png">
-            <div>HTML</div>
-        </div>
-        <div class="icons">
-            <img src="assets/img/firebase-icon.png">
-            <div>Firebase</div>
-        </div>
-        <div class="icons">
-            <img src="assets/img/git-icon.png">
-            <div>GIT</div>
-        </div>
-        <div class="icons">
-            <img src="assets/img/css-icon.png">
-            <div>CSS</div>
-        </div>
-        <div class="icons">
-            <img src="assets/img/rest-api-icon.png">
-            <div>Rest-Api</div>
+        <div class="icons" *ngFor="let skill of skills;  let i=index">
+            <img src="assets/img/{{ skill.icon }}">
+            <div>{{ skill.name }}</div>
         </div>
         <div class="last-column">
             <div class="icons">
