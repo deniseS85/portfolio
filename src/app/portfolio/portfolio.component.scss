@@ -1,0 +1,54 @@
+.headline-portfolio {
+    margin-top: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 90px;
+    font-family: 'Poppins bold';
+    div {
+        margin-right: 20px
+    }
+    img:nth-child(1) {
+        width: 109px;
+        margin-right: 20px;
+    }
+    img:nth-child(2) {
+        width: 484px;
+    }
+}
+
+.subtext-portfolio {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+}
+
+.first-project {
+    display: flex;
+    align-items: center;
+    img {
+        width: 620px;
+        height: 339px;
+    }
+    .content-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 150px;
+        padding-right: 95px;
+        div:nth-child(1) {
+            color: #4B47FF;
+            font-size: 32px;
+        }
+        div:nth-child(2) {
+            color: #00BEE8;
+            font-size: 23px;
+        }
+        div:nth-child(3) {
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+    }
+    
+}
