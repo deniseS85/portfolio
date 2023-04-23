@@ -10,7 +10,9 @@ header {
     background-color: #141D2F;
     z-index: 999;
     img {
-        width: 150px;
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
         cursor: pointer;
     }
     nav {
@@ -20,6 +22,7 @@ header {
             text-decoration: none;
             font-size: 23px;
             margin-left: 50px;
+            cursor: pointer;
             &:hover {
                 color: #1CDAE6;
                 transition: 0.5s;

@@ -24,22 +24,28 @@
     font-size: 16px;
 }
 
-.first-project {
+.project {
     display: flex;
     align-items: center;
+    margin: auto;
+    margin-top: 120px;
+    width: 80%;
+    justify-content: space-around;
     img {
         width: 620px;
         height: 339px;
+        object-fit: contain;
     }
     .content-right {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 150px;
-        padding-right: 95px;
+        height: 180px;
+        justify-content: space-around;
+        width: 450px;
         div:nth-child(1) {
-            color: #4B47FF;
+            color: #9747FF;
             font-size: 32px;
+            font-family: 'Poppins semibold';
         }
         div:nth-child(2) {
             color: #00BEE8;
@@ -50,5 +56,86 @@
             font-size: 16px;
         }
     }
-    
+    .content-left {
+        display: flex;
+        flex-direction: column;
+        height: 180px;
+        justify-content: space-around;
+        width: 450px;
+        text-align: right;
+        div:nth-child(1) {
+            color: #9747FF;
+            font-size: 32px;
+            font-family: 'Poppins semibold'; 
+        }
+        div:nth-child(2) {
+            color: #00BEE8;
+            font-size: 23px;
+        }
+        div:nth-child(3) {
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+    } 
 }
+
+.buttons {
+    button {
+        width: 152px;
+        height: 58px;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-right: 50px;
+        font-size: 23px;
+        padding: 15px 30px;
+        gap: 10px;
+        background-color: #9747FF;
+        color: #FFFFFF;  
+        z-index: 1;
+        cursor: pointer;
+        transition: 0.2s ease-in;
+        border: none;
+        &:hover {
+            background-color: #00BEE8;
+            transition: 0.2s ease-in;
+        }
+    }
+    .github-btn {
+        background-color: #141D2F;
+        border: 1px solid #00BEE8;
+        &:hover {
+            background-color: #00BEE8;
+        }
+    }
+}
+
+.buttons-second {
+    button {
+        width: 152px;
+        height: 58px;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-left: 50px;
+        font-size: 23px;
+        padding: 15px 30px;
+        gap: 10px;
+        background-color: #9747FF;
+        color: #FFFFFF;  
+        z-index: 1;
+        cursor: pointer;
+        transition: 0.2s ease-in;
+        border: none;
+        &:hover {
+            background-color: #00BEE8;
+            transition: 0.2s ease-in;
+        }
+    }
+    .github-btn {
+        background-color: #141D2F;
+        border: 1px solid #00BEE8;
+        &:hover {
+            background-color: #00BEE8;
+        }
+    }
+}
+

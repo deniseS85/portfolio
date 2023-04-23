@@ -85,6 +85,7 @@
         z-index: 1;
         cursor: pointer;
         transition: 0.2s ease-in;
+        border: none;
         &:hover {
             background-color: #9747FF;
             width: 185px;
@@ -111,10 +112,13 @@
             .scroll-info {
                 color: #FFFFFF;
                 font-size: 23px;
+                z-index: 1;
             }
             img {
                 width: 16px;
                 margin-top: 10px;
+                margin-right: 4px;
+                z-index: 1;
             }
         }
         .info-icons {
@@ -159,9 +163,7 @@
     margin-right: -68px;
     display: flex;
     justify-content: space-between;
-    background-color: #141D2F;
     align-items: center;
-    z-index: 1;
     .profile-round {
         width: 409px;
         height: 409px;

@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 180px;
+    height: 200px;
+    border-top: 4px solid #00BEE8;
+    color: #FFFFFF;
+    padding: 0 100px 10px 100px;
+    .content-left {
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            cursor: pointer;
+        }
+        div {
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 8px;
+            &:hover {
+                border-bottom: 2px solid #00BEE8;
+                margin-bottom: 6px;
+            }
+        }
+    }
+    .content-middle {
+        font-size: 23px;
+    }
+    .icons {
+        img {
+            margin-left: 30px;
+            cursor: pointer;
+            transition: 0.2s ease-in;
+            &:hover {
+                transform: scale(1.5);
+                transition: 0.2s ease-in;
+            } 
+        }
+    }
+}
