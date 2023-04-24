@@ -1,3 +1,8 @@
+$light-blue: #1CDAE6;
+$white: #FFFFFF;
+$background: #141D2F;
+$purple: #9747FF;
+
 header {
     position: fixed;
     top: 0;
@@ -7,8 +12,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
-    background-color: #141D2F;
     z-index: 999;
+    background-color: $background;
     img {
         width: 100px;
         height: 100px;
@@ -18,13 +23,13 @@ header {
     nav {
         display: flex;
         a {
-            color: #FFFFFF;
+            color: $white;
             text-decoration: none;
             font-size: 23px;
             margin-left: 50px;
             cursor: pointer;
             &:hover {
-                color: #1CDAE6;
+                color: $light-blue;
                 transition: 0.5s;
             }
             &::after {
@@ -34,28 +39,21 @@ header {
                 width: 50px;
                 border-bottom: 4px solid transparent;
             }
-            &:focus {
-                color: #1CDAE6;
-            }
-            &:focus::after {
-                content: '';
-                display: block;
-                position: relative;
-                top: 5px;
-                width: 50px;
-                border-bottom: 4px solid #9747FF;
-                transition: 0.5s;
-                color: #1CDAE6;
-            }
         }
     }
 }
 
-.active {
-    border-bottom: 4px solid #9747FF;
-    color: #1CDAE6;
+.active::after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 50px;
+    border-bottom: 4px solid $purple!important;
 }
 
+.active {
+    color: $light-blue!important;
+}
 
 
 

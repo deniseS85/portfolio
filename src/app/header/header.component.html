@@ -1,8 +1,8 @@
 <header>
-    <img src="assets/img/logo.png">
+    <img (click)="scroll('header')" routerLink="/" src="assets/img/logo.png">
     <nav>
-        <a (click)="scroll('aboutMe')">About me</a>
-        <a (click)="scroll('skills')">Skills</a>
-        <a (click)="scroll('portfolio')">Portfolio</a>
+        <a (click)="scroll('aboutMe')" routerLink="/aboutMe" routerLinkActive="active">About me</a>
+        <a (click)="scroll('skills')" routerLink="/skills" routerLinkActive="active">Skills</a>
+        <a (click)="scroll('portfolio')" routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
     </nav>
 </header>
