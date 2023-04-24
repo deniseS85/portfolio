@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -16,4 +17,10 @@ export class MySkillsComponent {
     { name: 'CSS', icon: 'css-icon.png' },
     { name: 'Rest-Api', icon: 'rest-api-icon.png' },
   ];
+
+  constructor(private viewportScroller: ViewportScroller) {}
+  
+  public scroll(elementId: string): void { 
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
 }

@@ -13,7 +13,7 @@
                 <div>FRONTEND DEVELOPER</div>
             </div>
         </div>
-        <button>Let's talk!</button>
+        <button (click)="scroll('contact')" routerLink="/contact">Let's talk!</button>
     </div>
 </div>
 
@@ -24,7 +24,9 @@
             <img src="assets/img/github.icon.png">
             <img src="assets/img/mail-icon.png">
             <img src="assets/img/linkedin-icon.png">
-            <p>denisabel78@hotmail.de</p>
+            <p>
+                <img (click)="scroll('contact')" routerLink="/contact" src="assets/img/email-image.png">
+            </p>
         </div>
         <div class="scroll">
             <p class="scroll-info">Scroll down</p>
@@ -45,8 +47,10 @@
                 <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eum repudiandae quis. g elit. Nostrum eum repudiandae quis. g elit. Nostrum eum repudiandae quis</div>
             </div>
         </div>
-        <img class="profile-round" src="assets/img/charater2.png">
-        <img class="line-profile-round" src="assets/img/line-about-me.png">
+        <div class="profile-round-container">
+            <img class="profile-round" src="assets/img/charater2.png">
+            <img class="line-profile-round" src="assets/img/line-about-me.png">
+        </div>
     </div>
 </div>
 
