@@ -3,13 +3,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    position: relative;
     .profile {
         width: 578px;
         height: 510px;
         position: relative;
         z-index: -1;
-
         img:nth-child(1) {
             width: 646px;
             position: absolute;
@@ -38,12 +37,10 @@
         margin-right: 87px;
         width: 725px;
         justify-content: space-between;
-
         .info-profile {
             cursor: default;
             display: flex;
         }
-
         .pretext-info-profile {
             color: var(--white);
             font-size: 64px;
@@ -53,7 +50,6 @@
             line-height: 77px;
             letter-spacing: 5px;
         }
-
         .subinfo-profile {
             display: flex;
             flex-direction: column;
@@ -70,7 +66,6 @@
                 padding-top: 8px;
             }
         }
-
         button {
             width: 165px;
             height: 58px;
@@ -94,20 +89,26 @@
             }
         }
     }
+    .banner {
+        position: absolute;
+        z-index: -2;
+        top: 400px;
+        width: 100%;
+        height: 70vh;
+    }
 }
+
 
 .info-content {
     display: flex;
     justify-content: space-between;
     margin-top: 220px;
     z-index: 1;
-
     .info-icons {
         display: flex;
         align-items: center;
         justify-content: space-around;
         width: 658px;
-       
         img:nth-child(1) {
             width: 100px;
             margin-left: -25px;
@@ -143,7 +144,6 @@
         margin-right: 70px;
         writing-mode: vertical-rl;
         .scroll-info {
-            
             color: var(--white);
             font-size: 23px;
             z-index: 1;
@@ -171,7 +171,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     .content-left {
         width: 452px;
     }

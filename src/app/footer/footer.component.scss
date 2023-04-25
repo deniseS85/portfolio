@@ -9,13 +9,6 @@
     padding: 0 100px 10px 100px;
     position: relative;
     background-color: var(--background);
-    .shadow {
-        position: absolute;
-        left: 0;
-        bottom: 0px;
-        z-index: -1;
-        overflow: hidden;
-    }
     .content-left {
         img {
             width: 100px;
@@ -46,5 +39,12 @@
                 transition: 0.2s ease-in;
             } 
         }
+    }
+    .shadow {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        z-index: -1;
+        overflow: hidden;
     }
 }
