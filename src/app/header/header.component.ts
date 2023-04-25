@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { IconsService } from '../icons.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { ViewportScroller } from '@angular/common';
 })
 
 export class HeaderComponent {
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(private viewportScroller: ViewportScroller, public is: IconsService) {}
 
   currentActive: number = 0;
 
@@ -20,11 +21,11 @@ export class HeaderComponent {
 @HostListener('window:scroll', ['$event'])
   checkOffsetTop() {
     console.log(window.pageYOffset); 
-    if (window.pageYOffset > 734 && window.pageYOffset < 1297) {
+    if (window.pageYOffset > 693 && window.pageYOffset < 1254) {
       this.currentActive = 1;
-    } else if (window.pageYOffset > 1298 && window.pageYOffset < 1851) {
+    } else if (window.pageYOffset > 1255 && window.pageYOffset < 1851) {
       this.currentActive = 2;
-    } else if (window.pageYOffset > 1852 && window.pageYOffset < 4307) {
+    } else if (window.pageYOffset > 1852 && window.pageYOffset < 3933) {
       this.currentActive = 3;
     } else {
       this.currentActive = 0;

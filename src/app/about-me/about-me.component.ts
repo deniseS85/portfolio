@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
+import { IconsService } from '../icons.service';
 
 @Component({
   selector: 'app-about-me',
@@ -7,8 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent {
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(private viewportScroller: ViewportScroller, public is: IconsService) {}
   
+
   public scroll(elementId: string): void { 
     this.viewportScroller.scrollToAnchor(elementId);
   }

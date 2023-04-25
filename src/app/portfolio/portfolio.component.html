@@ -14,7 +14,9 @@
             <div>{{ project.languages }}</div>
             <div>{{ project.description }}</div>
             <div class="buttons">
-                <button>Live test</button>
+                <a href="{{ project.linkLiveTest }}" target="_blank">
+                    <button>Live test</button>
+                </a>
                 <a href="{{ project.linkGitHub }}" target="_blank">
                     <button class="github-btn">Github</button>
                 </a>
@@ -27,8 +29,10 @@
             <div>{{ project.title }}</div>
             <div>{{ project.languages }}</div>
             <div>{{ project.description }}</div>
-            <div class="buttons-second">
-                <button>Live test</button>
+            <div class="buttons">
+                <a href="{{ project.linkLiveTest }}" target="_blank">
+                    <button>Live test</button>
+                </a>
                 <a href="{{ project.linkGitHub }}" target="_blank">
                     <button class="github-btn">Github</button>
                 </a>

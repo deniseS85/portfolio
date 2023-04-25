@@ -1,18 +1,8 @@
 <div class="my-skills-container">
     <div class="skills-icons">
-        <div class="icons" *ngFor="let skill of skills;  let i=index">
+        <div class="icons" *ngFor="let skill of skills">
             <img src="assets/img/{{ skill.icon }}">
             <div>{{ skill.name }}</div>
-        </div>
-        <div class="last-column">
-            <div class="icons">
-                <img src="assets/img/scrum-icon.png">
-                <div>Scrum</div>
-            </div>
-            <div class="icons">
-                <img src="assets/img/material-design-icon.png">
-                <div>Material<br>Design</div>
-            </div>
         </div>
     </div>
     <div class="my-skills">

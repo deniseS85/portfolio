@@ -1,5 +1,5 @@
 <header>
-    <img (click)="scroll('header')" routerLink="/" src="assets/img/logo.png">
+    <img (click)="scroll('header')" routerLink="/" src="{{ is.logo }}">
     <nav>
         <a (click)="scroll('aboutMe')" routerLink="/aboutMe" routerLinkActive="active" [ngClass]="{'active': currentActive === 1}">About me</a>
         <a (click)="scroll('skills')" routerLink="/skills" routerLinkActive="active" [ngClass]="{'active': currentActive === 2}">Skills</a>

@@ -1,6 +1,6 @@
 <div class="footer">
     <div class="content-left">
-        <img (click)="scroll('header')" routerLink="/" src="assets/img/logo.png">
+        <img (click)="scroll('header')" routerLink="/" src="{{ is.logo }}">
         <div>Impressum</div>
         <div>Datenschutz</div>
     </div>
@@ -8,9 +8,7 @@
         <div>&copy; Denise Siegl 2023</div>
     </div>
     <div class="icons">
-        <img src="assets/img/github.icon.png">
-        <img src="assets/img/mail-icon.png">
-        <img src="assets/img/linkedin-icon.png">
+        <img *ngFor="let icon of is.infoIcons" src="{{ icon }}">
     </div>
-    <img class="shadow"src="assets/img/shadow-contact.png">
+    <img class="shadow"src="assets/img/shadow-footer.png">
 </div>

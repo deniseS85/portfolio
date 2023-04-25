@@ -5,30 +5,31 @@
     justify-content: space-between;
     .skills-icons {
         padding-left: 98px;
+        padding-top: 37px;
         display: flex;
-        justify-content: space-between;
+        gap: 36px;
         width: 650px;
-        height: 100px;
+        height: 414px;
         flex-wrap: wrap;
         z-index: 1;
-        img {
-            width: 55px;
-            height: 55px;
-            object-fit: contain;
-            margin-right: 40px;
-            margin-left: 40px;
-        }
         .icons {
             margin-bottom: 40px;
+            img {
+                width: 55px;
+                height: 55px;
+                object-fit: contain;
+                margin-right: 40px;
+                margin-left: 40px;
+                transition: 0.1s ease-in;
+                &:hover {
+                    transform: scale(1.2);
+                    transition: 0.1s ease-in;
+                }
+            }
             div {
                 color: var(--white);
                 text-align: center;
             }
-        }
-        .last-column {
-            display: flex;
-            width: 306px;
-            justify-content: space-between;
         }
     }
     .my-skills {

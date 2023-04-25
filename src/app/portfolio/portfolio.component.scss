@@ -1,17 +1,17 @@
 .headline-portfolio {
-    margin-top: 250px;
+    margin-top: 200px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     color: var(--white);
     font-size: 90px;
     font-family: 'Poppins bold';
-    div {
-        margin-right: 20px
-    }
     img:nth-child(1) {
         width: 109px;
         margin-right: 20px;
+    }
+    div {
+        margin-right: 20px
     }
     img:nth-child(2) {
         width: 484px;
@@ -77,64 +77,34 @@
             font-size: 16px;
         }
     } 
-}
 
-.buttons {
-    button {
-        width: 152px;
-        height: 58px;
-        border-radius: 10px;
-        margin-top: 30px;
-        margin-right: 50px;
-        font-size: 23px;
-        padding: 15px 30px;
-        gap: 10px;
-        background-color: var(--purple);
-        color: var(--white);  
-        z-index: 1;
-        cursor: pointer;
-        transition: 0.2s ease-in;
-        border: none;
-        &:hover {
-            background-color: var(--light-blue);
+    .buttons {
+        button {
+            width: 152px;
+            height: 58px;
+            border-radius: 10px;
+            margin-top: 30px;
+            margin-right: 50px;
+            font-size: 23px;
+            padding: 15px 30px;
+            gap: 10px;
+            background-color: var(--purple);
+            color: var(--white);  
+            z-index: 1;
+            cursor: pointer;
             transition: 0.2s ease-in;
+            border: none;
+            &:hover {
+                background-color: var(--light-blue);
+                transition: 0.2s ease-in;
+            }
         }
-    }
-    .github-btn {
-        background-color: var(--background);
-        border: 1px solid var(--light-blue);
-        &:hover {
-            background-color: var(--light-blue);
-        }
-    }
-}
-
-.buttons-second {
-    button {
-        width: 152px;
-        height: 58px;
-        border-radius: 10px;
-        margin-top: 30px;
-        margin-left: 50px;
-        font-size: 23px;
-        padding: 15px 30px;
-        gap: 10px;
-        background-color: var(--purple);
-        color: var(--white);  
-        z-index: 1;
-        cursor: pointer;
-        transition: 0.2s ease-in;
-        border: none;
-        &:hover {
-            background-color: var(--light-blue);
-            transition: 0.2s ease-in;
-        }
-    }
-    .github-btn {
-        background-color: var(--background);
-        border: 1px solid var(--light-blue);
-        &:hover {
-            background-color: var(--light-blue);
+        .github-btn {
+            background-color: var(--background);
+            border: 1px solid var(--light-blue);
+            &:hover {
+                background-color: var(--light-blue);
+            }
         }
     }
 }

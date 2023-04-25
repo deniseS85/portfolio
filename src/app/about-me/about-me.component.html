@@ -17,40 +17,38 @@
     </div>
 </div>
 
-<div class="banner">
-    <div class="banner-content-up">
-        <div class="info-icons">
-            <img src="assets/img/line-info-profile.png">
-            <img src="assets/img/github.icon.png">
-            <img src="assets/img/mail-icon.png">
-            <img src="assets/img/linkedin-icon.png">
-            <p>
-                <img (click)="scroll('contact')" routerLink="/contact" src="assets/img/email-image.png">
-            </p>
+<!-- <img src="assets/img/banner.png"> -->
+
+<div class="info-content">
+    <div class="info-icons" >
+        <img src="assets/img/line-info-profile.png">
+        <img *ngFor="let icon of is.infoIcons" src="{{ icon }}">
+        <p>
+            <img (click)="scroll('contact')" routerLink="/contact" src="assets/img/email-image.png">
+        </p>
+    </div>
+    <div class="scroll">
+        <p class="scroll-info">Scroll down</p>
+        <img src="assets/img/arrow-down.png">
+    </div>
+</div>
+
+<div class="about-me-content">
+    <div class="content-left">
+        <div id="aboutMe" class="header-about-me-content">About Me</div>
+        <div class="present-text">Hi, I am Denise. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate maiores, dolores ea commodi voluptatem, temporibus dolore expedita, perspiciatis voluptas minus possimus dignissimos</div>
+        <div class="subinfo-first">
+            <img src="assets/img/idea.png">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eum repudiandae quis. g elit. Nostrum eum repudiandae quis. g elit. Nostrum eum repudiandae quis</div>
         </div>
-        <div class="scroll">
-            <p class="scroll-info">Scroll down</p>
-            <img src="assets/img/arrow-down.png">
+        <div class="subinfo-second">
+            <img src="assets/img/puzzle.png">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eum repudiandae quis. g elit. Nostrum eum repudiandae quis. g elit. Nostrum eum repudiandae quis</div>
         </div>
     </div>
-        
-    <div class="about-me-content">
-        <div class="content-left">
-            <div id="aboutMe" class="header-about-me-content">About Me</div>
-            <div class="present-text">Hi, I am Denise. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate maiores, dolores ea commodi voluptatem, temporibus dolore expedita, perspiciatis voluptas minus possimus dignissimos</div>
-            <div class="subinfo-first">
-                <img src="assets/img/idea.png">
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eum repudiandae quis. g elit. Nostrum eum repudiandae quis. g elit. Nostrum eum repudiandae quis</div>
-            </div>
-            <div class="subinfo-second">
-                <img src="assets/img/puzzle.png">
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eum repudiandae quis. g elit. Nostrum eum repudiandae quis. g elit. Nostrum eum repudiandae quis</div>
-            </div>
-        </div>
-        <div class="profile-round-container">
-            <img class="profile-round" src="assets/img/charater2.png">
-            <img class="line-profile-round" src="assets/img/line-about-me.png">
-        </div>
+    <div class="profile-round-container">
+        <img class="profile-round" src="assets/img/charater2.png">
+        <img class="line-profile-round" src="assets/img/line-about-me.png">
     </div>
 </div>
 
