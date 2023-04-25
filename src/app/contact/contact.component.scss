@@ -19,7 +19,6 @@
     justify-content: space-between;
     padding-left: 115px;
     padding-right: 100px;
-    
     .content-left {
         color: #FFFFFF;
         width: 473px;
@@ -40,7 +39,7 @@
         form {
             display: flex;
             flex-direction: column;
-            height: 370px;
+            height: 470px;
             justify-content: space-between;
             ::placeholder {
                 color: #FFFFFF;
@@ -67,6 +66,7 @@
                 border: 1px solid #9747FF;
                 border-radius: 10px;
                 padding: 15px 25px;
+                font-family: 'Poppins';
                 cursor: pointer;
                 color: #FFFFFF;
                 font-size: 16px;
@@ -74,33 +74,31 @@
                     border: 1px solid #1CDAE6;
                 }
             }
-        }
-        .button {
-            width: 617px;
-            display: flex;
-            justify-content: center;
-            button {
-                width: 241px;
-                height: 58px;
-                border-radius: 10px;
-                margin-top: 50px;
-                font-size: 23px;
-                padding: 15px 30px;
-                gap: 10px;
-                background-color: #00BEE8;
-                color: #FFFFFF;  
-                z-index: 1;
-                cursor: pointer;
-                transition: 0.2s ease-in;
-                border: none;
-                &:hover {
-                    background-color: #9747FF;
-                    width: 261px;
-                    height: 68px;
+            .button {
+                width: 617px;
+                display: flex;
+                justify-content: center;
+                button {
+                    width: 241px;
+                    height: 58px;
+                    border-radius: 10px;
+                    font-size: 23px;
+                    padding: 15px 30px;
+                    background-color: #00BEE8;
+                    color: #FFFFFF;  
+                    z-index: 1;
+                    cursor: pointer;
                     transition: 0.2s ease-in;
-                    margin-top: 40px;
-                }
-            } 
+                    border: none;
+                    &:hover {
+                        background-color: #9747FF;
+                        width: 261px;
+                        height: 68px;
+                        transition: 0.2s ease-in;
+                        margin: -5px;
+                    }
+                } 
+            }
         }
     }
 }
