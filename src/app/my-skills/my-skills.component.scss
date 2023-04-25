@@ -1,5 +1,4 @@
 .my-skills-container {
-    background-color: #141D2F;
     padding-top: 190px;
     padding-right: 101px;
     display: flex;
@@ -22,7 +21,7 @@
         .icons {
             margin-bottom: 40px;
             div {
-                color: #FFFFFF;
+                color: var(--white);
                 text-align: center;
             }
         }
@@ -33,7 +32,7 @@
         }
     }
     .my-skills {
-        color: #FFFFFF;
+        color: var(--white);
         text-align: center;
         div:nth-child(1) {
             font-size: 90px;
@@ -51,14 +50,14 @@
             font-size: 23px;
             padding: 15px 30px;
             gap: 10px;
-            background-color: #00BEE8;
-            color: #FFFFFF;  
+            background-color: var(--light-blue);
+            color: var(--white);  
             z-index: 1;
             cursor: pointer;
             transition: 0.2s ease-in;
             border: none;
             &:hover {
-                background-color: #9747FF;
+                background-color: var(--purple);
                 width: 220px;
                 height: 68px;
                 transition: 0.2s ease-in;
@@ -72,7 +71,6 @@
         right: 0;
         width: 58px;
         height: 4px;
-       
     }
 }
 

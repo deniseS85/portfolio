@@ -4,9 +4,18 @@
     align-items: center;
     margin-top: 180px;
     height: 200px;
-    border-top: 4px solid #00BEE8;
-    color: #FFFFFF;
+    border-top: 4px solid var(--light-blue);
+    color: var(--white);
     padding: 0 100px 10px 100px;
+    position: relative;
+    background-color: var(--background);
+    .shadow {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        z-index: -1;
+        overflow: hidden;
+    }
     .content-left {
         img {
             width: 100px;
@@ -19,7 +28,7 @@
             cursor: pointer;
             margin-bottom: 8px;
             &:hover {
-                border-bottom: 2px solid #00BEE8;
+                border-bottom: 2px solid var(--light-blue);
                 margin-bottom: 6px;
             }
         }

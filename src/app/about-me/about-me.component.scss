@@ -3,95 +3,95 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
 
-.profile {
-    width: 578px;
-    height: 510px;
-    position: relative;
-
-    img:nth-child(1) {
-        width: 646px;
-        position: absolute;
-        left: -40px;
-        top: 0px;
+    .profile {
+        width: 578px;
+        height: 510px;
+        position: relative;
         z-index: -1;
-    }
-    img:nth-child(2) {
-        width: 515px;
-        position: absolute;
-        right: -136px;
-        top: 95px;
-        z-index: -1;
-    }
-    img:nth-child(3) {
-        width: 610px;
-        height: 660px;
-        margin-left: 60px;
-        z-index: 1;
-    }
-}
 
-.profile-content-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 87px;
-    width: 725px;
-    justify-content: space-between;
-
-    .info-profile {
-        cursor: default;
-        display: flex;
+        img:nth-child(1) {
+            width: 646px;
+            position: absolute;
+            left: -40px;
+            top: 0px;
+            z-index: -1;
+        }
+        img:nth-child(2) {
+            width: 515px;
+            position: absolute;
+            right: -136px;
+            top: 95px;
+            z-index: -1;
+        }
+        img:nth-child(3) {
+            width: 610px;
+            height: 660px;
+            margin-left: 60px;
+        }
     }
 
-    .pretext-info-profile {
-        color: #FFFFFF;
-        font-size: 64px;
-        writing-mode: vertical-rl;
-        transform:rotate(180deg); 
-        margin-right: 20px;
-        line-height: 77px;
-        letter-spacing: 5px;
-    }
-
-    .subinfo-profile {
+    .profile-content-right {
         display: flex;
         flex-direction: column;
-        div:nth-child(1) {
-            color: #FFFFFF;
-            font-size: 89px;
-            font-family: 'Poppins bold';
-            letter-spacing: 6.2px;
-        }
-        div:nth-child(2) {
-            color: #9747FF;
-            font-size: 58px;
-            line-height: 46px;
-            padding-top: 8px;
-        }
-    }
+        align-items: center;
+        margin-right: 87px;
+        width: 725px;
+        justify-content: space-between;
 
-    button {
-        width: 165px;
-        height: 58px;
-        border-radius: 10px;
-        margin-top: 50px;
-        font-size: 23px;
-        padding: 15px 30px;
-        gap: 10px;
-        background-color: #00BEE8;
-        color: #FFFFFF;  
-        z-index: 1;
-        cursor: pointer;
-        transition: 0.2s ease-in;
-        border: none;
-        &:hover {
-            background-color: #9747FF;
-            width: 185px;
-            height: 68px;
+        .info-profile {
+            cursor: default;
+            display: flex;
+        }
+
+        .pretext-info-profile {
+            color: var(--white);
+            font-size: 64px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg); 
+            margin-right: 20px;
+            line-height: 77px;
+            letter-spacing: 5px;
+        }
+
+        .subinfo-profile {
+            display: flex;
+            flex-direction: column;
+            div:nth-child(1) {
+                color: var(--white);
+                font-size: 89px;
+                font-family: 'Poppins bold';
+                letter-spacing: 6.2px;
+            }
+            div:nth-child(2) {
+                color: var(--purple);
+                font-size: 58px;
+                line-height: 46px;
+                padding-top: 8px;
+            }
+        }
+
+        button {
+            width: 165px;
+            height: 58px;
+            border-radius: 10px;
+            margin-top: 50px;
+            font-size: 23px;
+            padding: 15px 30px;
+            gap: 10px;
+            background-color: var(--light-blue);
+            color: var(--white);  
+            z-index: 1;
+            cursor: pointer;
             transition: 0.2s ease-in;
-            margin-top: 40px;
+            border: none;
+            &:hover {
+                background-color: var(--purple);
+                width: 185px;
+                height: 68px;
+                transition: 0.2s ease-in;
+                margin-top: 40px;
+            }
         }
     }
 }
@@ -111,7 +111,7 @@
             margin-top: -130px;
             writing-mode: vertical-rl;
             .scroll-info {
-                color: #FFFFFF;
+                color: var(--white);
                 font-size: 23px;
                 z-index: 1;
             }
@@ -153,7 +153,6 @@
                         transition: unset!important;
                     }
                 }
-                
             }
         }
     }
@@ -167,7 +166,7 @@
 }
 
 .about-me-content {
-    color: #FFFFFF;
+    color: var(--white);
     padding-left: 115px;
     padding-top: 50px;
     display: flex;
@@ -219,7 +218,7 @@
         .profile-round {
             width: 409px;
             height: 409px;
-            border: 4px solid #00BEE8;
+            border: 4px solid var(--light-blue);
             border-radius: 100%;
             margin-right: -190px;
         }

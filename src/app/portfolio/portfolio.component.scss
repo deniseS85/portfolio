@@ -3,7 +3,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    color: #FFFFFF;
+    color: var(--white);
     font-size: 90px;
     font-family: 'Poppins bold';
     div {
@@ -19,7 +19,7 @@
 }
 
 .subtext-portfolio {
-    color: #FFFFFF;
+    color: var(--white);
     text-align: center;
     font-size: 16px;
 }
@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 100px;
     width: 80%;
     justify-content: space-around;
     img {
@@ -43,16 +43,16 @@
         justify-content: space-around;
         width: 450px;
         div:nth-child(1) {
-            color: #9747FF;
+            color: var(--purple);
             font-size: 32px;
             font-family: 'Poppins semibold';
         }
         div:nth-child(2) {
-            color: #00BEE8;
+            color: var(--light-blue);
             font-size: 23px;
         }
         div:nth-child(3) {
-            color: #FFFFFF;
+            color: var(--white);
             font-size: 16px;
         }
     }
@@ -64,16 +64,16 @@
         width: 450px;
         text-align: right;
         div:nth-child(1) {
-            color: #9747FF;
+            color: var(--purple);
             font-size: 32px;
             font-family: 'Poppins semibold'; 
         }
         div:nth-child(2) {
-            color: #00BEE8;
+            color: var(--light-blue);
             font-size: 23px;
         }
         div:nth-child(3) {
-            color: #FFFFFF;
+            color: var(--white);
             font-size: 16px;
         }
     } 
@@ -89,22 +89,22 @@
         font-size: 23px;
         padding: 15px 30px;
         gap: 10px;
-        background-color: #9747FF;
-        color: #FFFFFF;  
+        background-color: var(--purple);
+        color: var(--white);  
         z-index: 1;
         cursor: pointer;
         transition: 0.2s ease-in;
         border: none;
         &:hover {
-            background-color: #00BEE8;
+            background-color: var(--light-blue);
             transition: 0.2s ease-in;
         }
     }
     .github-btn {
-        background-color: #141D2F;
-        border: 1px solid #00BEE8;
+        background-color: var(--background);
+        border: 1px solid var(--light-blue);
         &:hover {
-            background-color: #00BEE8;
+            background-color: var(--light-blue);
         }
     }
 }
@@ -119,22 +119,22 @@
         font-size: 23px;
         padding: 15px 30px;
         gap: 10px;
-        background-color: #9747FF;
-        color: #FFFFFF;  
+        background-color: var(--purple);
+        color: var(--white);  
         z-index: 1;
         cursor: pointer;
         transition: 0.2s ease-in;
         border: none;
         &:hover {
-            background-color: #00BEE8;
+            background-color: var(--light-blue);
             transition: 0.2s ease-in;
         }
     }
     .github-btn {
-        background-color: #141D2F;
-        border: 1px solid #00BEE8;
+        background-color: var(--background);
+        border: 1px solid var(--light-blue);
         &:hover {
-            background-color: #00BEE8;
+            background-color: var(--light-blue);
         }
     }
 }

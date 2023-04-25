@@ -6,67 +6,34 @@
 
 <div class="subtext-portfolio">This page is a sample of my work - please feel free to try them out.</div>
 
-<div class="project">
-    <img src="assets/img/join-photo.png">
-    <div class="content-right">
-        <div>Join</div>
-        <div>JavaScript | HTML | CSS | GIT</div>
-        <div>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</div>
-        <div class="buttons">
-            <button>Live test</button>
-            <button class="github-btn">Github</button>
+<div *ngFor="let project of projects; let i = index">
+    <div class="project" *ngIf="i % 2 == 0">
+        <img src="{{ project.image }}">
+        <div class="content-right">
+            <div>{{ project.title }}</div>
+            <div>{{ project.languages }}</div>
+            <div>{{ project.description }}</div>
+            <div class="buttons">
+                <button>Live test</button>
+                <a href="{{ project.linkGitHub }}" target="_blank">
+                    <button class="github-btn">Github</button>
+                </a>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="project">
-    <div class="content-left">
-        <div>Join</div>
-        <div>JavaScript | HTML | CSS | GIT</div>
-        <div>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</div>
-        <div class="buttons-second">
-            <button>Live test</button>
-            <button class="github-btn">Github</button>
+    <div class="project" *ngIf="i % 2 != 0">
+        <div class="content-left">
+            <div>{{ project.title }}</div>
+            <div>{{ project.languages }}</div>
+            <div>{{ project.description }}</div>
+            <div class="buttons-second">
+                <button>Live test</button>
+                <a href="{{ project.linkGitHub }}" target="_blank">
+                    <button class="github-btn">Github</button>
+                </a>
+            </div>
         </div>
-    </div>
-    <img src="assets/img/join-photo.png">
-</div>
-
-<div class="project">
-    <img src="assets/img/join-photo.png">
-    <div class="content-right">
-        <div>Join</div>
-        <div>JavaScript | HTML | CSS | GIT</div>
-        <div>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</div>
-        <div class="buttons">
-            <button>Live test</button>
-            <button class="github-btn">Github</button>
-        </div>
-    </div>
-</div>
-
-<div class="project">
-    <div class="content-left">
-        <div>Join</div>
-        <div>JavaScript | HTML | CSS | GIT</div>
-        <div>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</div>
-        <div class="buttons-second">
-            <button>Live test</button>
-            <button class="github-btn">Github</button>
-        </div>
-    </div>
-    <img src="assets/img/join-photo.png">
-</div>
-
-<div class="project">
-    <img src="assets/img/join-photo.png">
-    <div class="content-right">
-        <div>Join</div>
-        <div>JavaScript | HTML | CSS | GIT</div>
-        <div>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</div>
-        <div class="buttons">
-            <button>Live test</button>
-            <button class="github-btn">Github</button>
-        </div>
+        <img src="{{ project.image }}">
     </div>
 </div>
