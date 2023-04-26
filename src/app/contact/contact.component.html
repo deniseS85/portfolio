@@ -11,11 +11,11 @@
     </div>
     <div class="content-right">
         <form (submit)="sendMail()" ngNativeValidate>
-            <input type="text" name="name" placeholder="Your name" required #nameField>
-            <input type="email" placeholder="Your email" required #mailField>
-            <textarea name="message" placeholder="Your message" required #messageField></textarea>
+            <input type="text" name="name" placeholder="Your name" required="required" #nameField autocomplete="off">
+            <input type="email" placeholder="Your email" required="required" #mailField autocomplete="off">
+            <textarea name="message" placeholder="Your message" required="required" #messageField></textarea>
             <div class="button">
-                <button type="submit">Send message :)</button>
+                <button type="submit" #sendBtn>Send message :)</button>
             </div>
         </form>
         

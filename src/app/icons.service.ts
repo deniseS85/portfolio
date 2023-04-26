@@ -4,8 +4,25 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class IconsService {
-
-  infoIcons = ['assets/img/github.icon.png', 'assets/img/mail-icon.png', 'assets/img/linkedin-icon.png'];
-  logo = 'assets/img/logo.png';
   constructor() { }
+
+  logo = 'assets/img/logo.png';
+
+  infoIcons = [
+    {
+      image: 'assets/img/github.icon.png',
+      url: 'https://github.com/deniseS85'
+    },
+    {
+      image: 'assets/img/mail-icon.png',
+      url: '#contact'
+    },
+    {
+      image: 'assets/img/linkedin-icon.png',
+      url: 'https://www.linkedin.com/in/denise-siegl-708020274'
+    }
+   
+  ]
+
+  
 }

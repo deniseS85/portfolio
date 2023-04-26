@@ -7,8 +7,10 @@
     <div class="content-middle">
         <div>&copy; Denise Siegl 2023</div>
     </div>
-    <div class="icons">
-        <img *ngFor="let icon of is.infoIcons" src="{{ icon }}">
+    <div class="icons" >
+        <a *ngFor="let icon of is.infoIcons" href="{{ icon.url }}" target="{{!icon.url.includes('#')  ? '_blank' : '_self'}}">
+            <img  src="{{ icon.image }}">
+        </a>
     </div>
     <img class="shadow"src="assets/img/shadow-footer.png">
 </div>

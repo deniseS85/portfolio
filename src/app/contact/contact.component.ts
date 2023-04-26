@@ -12,6 +12,7 @@ export class ContactComponent {
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('mailField') mailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
+  @ViewChild('sendBtn') sendBtn!: ElementRef;
 
   public scroll(elementId: string): void { 
     this.viewportScroller.scrollToAnchor(elementId);
@@ -21,10 +22,12 @@ export class ContactComponent {
     let nameField = this.nameField.nativeElement;
     let mailField = this.mailField.nativeElement;
     let messageField = this.messageField.nativeElement;
+    let sendBtn = this.sendBtn.nativeElement;
     
     nameField.disabled = true;
     mailField.disabled = true;
     messageField.disabled = true;
+    sendBtn.disabled = true;
 
     //animation senden
 

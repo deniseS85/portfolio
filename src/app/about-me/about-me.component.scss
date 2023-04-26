@@ -110,11 +110,9 @@
         justify-content: space-around;
         width: 658px;
         img:nth-child(1) {
-            width: 100px;
-            margin-left: -25px;
+            margin-left: -46px;
         }
         img {
-            width: 30px;
             cursor: pointer;
             transition: 0.2s ease-in;
             &:hover {
@@ -126,10 +124,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: 24px;
             img {
                 cursor: pointer;
                 width: 250px;
+                padding-bottom: 4px;
                 &:hover {
                     transform: unset!important;
                     transition: unset!important;

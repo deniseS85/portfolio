@@ -18,11 +18,12 @@
     <img class="banner" src="assets/img/banner.png">
 </div>
 
-
 <div class="info-content">
-    <div class="info-icons" >
+    <div class="info-icons">
         <img src="assets/img/line-info-profile.png">
-        <img *ngFor="let icon of is.infoIcons" src="{{ icon }}">
+        <a *ngFor="let icon of is.infoIcons" href="{{ icon.url }}" target="{{!icon.url.includes('#')  ? '_blank' : '_self'}}">
+            <img src="{{ icon.image }}">
+        </a>
         <p>
             <img (click)="scroll('contact')" routerLink="/contact" src="assets/img/email-image.png">
         </p>

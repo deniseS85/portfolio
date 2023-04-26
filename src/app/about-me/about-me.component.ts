@@ -8,6 +8,7 @@ import { IconsService } from '../icons.service';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent {
+
   constructor(private viewportScroller: ViewportScroller, public is: IconsService) {}
   
 

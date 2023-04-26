@@ -1,43 +1,48 @@
-<div class="headline-portfolio">
-    <img src="assets/img/line-left-portfolio.png">
-    <div id="portfolio">Portfolio</div>
-    <img src="assets/img/line-right-portfolio.png">
-</div>
+<div class="portfolio-container">
+    <div class="headline-portfolio">
+        <img src="assets/img/line-left-portfolio.png">
+        <div id="portfolio">Portfolio</div>
+        <img src="assets/img/line-right-portfolio.png">
+    </div>
 
-<div class="subtext-portfolio">This page is a sample of my work - please feel free to try them out.</div>
+    <div class="subtext-portfolio">This page is a sample of my work - please feel free to try them out.</div>
 
-<div *ngFor="let project of projects; let i = index">
-    <div class="project" *ngIf="i % 2 == 0">
-        <img src="{{ project.image }}">
-        <div class="content-right">
-            <div>{{ project.title }}</div>
-            <div>{{ project.languages }}</div>
-            <div>{{ project.description }}</div>
-            <div class="buttons">
-                <a href="{{ project.linkLiveTest }}" target="_blank">
-                    <button>Live test</button>
-                </a>
-                <a href="{{ project.linkGitHub }}" target="_blank">
-                    <button class="github-btn">Github</button>
-                </a>
+    <div *ngFor="let project of projects; let i = index">
+        <div class="project" *ngIf="i % 2 == 0">
+            <img src="{{ project.image }}">
+            <div class="content-right">
+                <div>{{ project.title }}</div>
+                <div>{{ project.languages }}</div>
+                <div>{{ project.description }}</div>
+                <div class="buttons">
+                    <a href="{{ project.linkLiveTest }}" target="_blank">
+                        <button>Live test</button>
+                    </a>
+                    <a href="{{ project.linkGitHub }}" target="_blank">
+                        <button class="github-btn">Github</button>
+                    </a>
+                </div>
             </div>
+        </div>
+
+        <div class="project" *ngIf="i % 2 != 0">
+            <div class="content-left">
+                <div>{{ project.title }}</div>
+                <div>{{ project.languages }}</div>
+                <div>{{ project.description }}</div>
+                <div class="buttons">
+                    <a href="{{ project.linkLiveTest }}" target="_blank">
+                        <button>Live test</button>
+                    </a>
+                    <a href="{{ project.linkGitHub }}" target="_blank">
+                        <button class="github-btn">Github</button>
+                    </a>
+                </div>
+            </div>
+            <img src="{{ project.image }}">
         </div>
     </div>
 
-    <div class="project" *ngIf="i % 2 != 0">
-        <div class="content-left">
-            <div>{{ project.title }}</div>
-            <div>{{ project.languages }}</div>
-            <div>{{ project.description }}</div>
-            <div class="buttons">
-                <a href="{{ project.linkLiveTest }}" target="_blank">
-                    <button>Live test</button>
-                </a>
-                <a href="{{ project.linkGitHub }}" target="_blank">
-                    <button class="github-btn">Github</button>
-                </a>
-            </div>
-        </div>
-        <img src="{{ project.image }}">
-    </div>
+    <img class="shadow-left" src="assets/img/shadow-left-portfolio.png">
+    <img class="shadow-right" src="assets/img/shadow-right-portfolio.png">
 </div>
