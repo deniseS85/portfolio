@@ -9,6 +9,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class ContactComponent {
   constructor(private viewportScroller: ViewportScroller) {}
   
+  @ViewChild('form') form!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('mailField') mailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
@@ -32,21 +33,27 @@ export class ContactComponent {
     //animation senden
 
     let fd = new FormData();
-    fd.append('nameField', nameField.value);
-    fd.append('mailField', mailField.value);
-    fd.append('messageField', messageField.value);
+    fd.append('name', nameField.value);
+    fd.append('email', mailField.value);
+    fd.append('message', messageField.value);
 
-    await fetch('https://denise.selfcoders.com/send_mail.php'),
-    {
-      method: 'POST',
-      body: fd
-    }
+    console.log(fd);
+
+    await fetch('https://denise-siegl.developerakademie.net/send_mail/send_mail.php',
+      {
+        method: 'POST',
+        body: fd
+      }
+    );
   
 
     // text anzeigen gesendet
-    /* nameField.disabled = false;
+    nameField.disabled = false;
     mailField.disabled = false;
-    messageField.disabled = false; */
+    messageField.disabled = false;
+    nameField.value = '';
+    mailField.value = '';
+    messageField.value = '';
   }
 
 }

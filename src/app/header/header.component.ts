@@ -20,7 +20,6 @@ export class HeaderComponent {
 
 @HostListener('window:scroll', ['$event'])
   checkOffsetTop() {
-    console.log(window.pageYOffset); 
     if (window.pageYOffset > 693 && window.pageYOffset < 1254) {
       this.currentActive = 1;
     } else if (window.pageYOffset > 1255 && window.pageYOffset < 1851) {

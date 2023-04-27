@@ -41,37 +41,65 @@
             flex-direction: column;
             height: 470px;
             justify-content: space-between;
-            ::placeholder {
-                color: #FFFFFF;
-                font-size: 16px;
-                font-family: 'Poppins';
+            .formfield {
+                position: relative;
             }
-            input {
-                box-sizing: border-box;
-                height: 50px;
-                background-color: #141D2F;
+            input, textarea {
+                font-family: 'Poppins';
+                width: 91.6%;
+                font-size: 16px;
+                outline: none;
                 border: 1px solid #9747FF;
-                border-radius: 10px;
+                border-radius: 10px;  
                 padding: 15px 25px;
                 color: #FFFFFF;
-                font-size: 16px;
-                cursor: text;
-                &:hover {
+                transition: 0.2s ease-out;
+                background-color: #141D2F;
+                 &:hover {
                     border: 1px solid #1CDAE6;
                 }
             }
             textarea {
                 height: 180px;
+                resize: none;
+               
+            }
+            input:focus, textarea:focus {
+                border-color: #9747FF;  
+            }
+            input:focus + label, textarea:focus + label {
+                color: #9747FF;
+                top: 0;
+                transform: translateY(-50%) scale(.9);
                 background-color: #141D2F;
-                border: 1px solid #9747FF;
-                border-radius: 10px;
-                padding: 15px 25px;
-                font-family: 'Poppins';
-                color: #FFFFFF;
+            }
+            input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
+                top: 0;
+                transform: translateY(-50%) scale(.9);
+                color: #9747FF;
+            }
+            input:not(:placeholder-shown):hover + label, textarea:not(:placeholder-shown):hover + label {
+                color: #1CDAE6;
+            }
+            input:hover, textarea:hover {
+                border-color: #1CDAE6;
+            }
+            input:focus:hover + label, textarea:focus:hover + label {
+                color: #1CDAE6;
+            }
+            label {
+                position: absolute;
                 font-size: 16px;
-                &:hover {
-                    border: 1px solid #1CDAE6;
-                }
+                left: 0;
+                top: 25px;
+                transform: translateY(-50%);
+                color: #FFFFFF;
+                padding: 0 4.8px;
+                margin: 0 8px;
+                transition: .2s ease-out;
+                transform-origin: left top;
+                pointer-events: none;
+                background-color: #141D2F;
             }
             .button {
                 width: 617px;
@@ -101,6 +129,7 @@
         }
     }
 }
+
 
 .arrow-up {
     margin-top: 50px;
