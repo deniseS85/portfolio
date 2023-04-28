@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, Input } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +10,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class ContactComponent {
   constructor(private viewportScroller: ViewportScroller) {}
   
+  @Input() nameInvalid = false;
+  @Input() emailInvalid = false;
+  @Input() messageInvalid = false;
   @ViewChild('form') form!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('mailField') mailField!: ElementRef;
@@ -17,6 +21,19 @@ export class ContactComponent {
 
   public scroll(elementId: string): void { 
     this.viewportScroller.scrollToAnchor(elementId);
+  }
+
+
+  nameIsInvalid(){
+    this.nameInvalid=true;
+  }
+
+  emailIsInvalid(){
+    this.emailInvalid=true;
+  }
+
+  messageIsinvalid(){
+    this.messageInvalid=true;
   }
 
   async sendMail() {
@@ -37,7 +54,6 @@ export class ContactComponent {
     fd.append('email', mailField.value);
     fd.append('message', messageField.value);
 
-    console.log(fd);
 
     await fetch('https://denise-siegl.developerakademie.net/send_mail/send_mail.php',
       {
@@ -45,7 +61,7 @@ export class ContactComponent {
         body: fd
       }
     );
-  
+    
 
     // text anzeigen gesendet
     nameField.disabled = false;
@@ -57,3 +73,4 @@ export class ContactComponent {
   }
 
 }
+
