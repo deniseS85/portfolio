@@ -10,35 +10,54 @@
         <div>Need a Frontend developer? <span>Contact me!</span></div>
     </div>
     <div class="content-right">
-        <form (submit)="sendMail()" ngNativeValidate #form>
+        <form [formGroup]="contactForm" (submit)="sendMail()">
             <div class="formfield">
-                <input type="name" name="name" placeholder=" " required #nameField 
-                [class.error-border]="nameInvalid"
-                (invalid)="nameIsInvalid()"
-                (input)="nameInvalid=false">
-                <label [class.error-label]="nameInvalid">Your name</label>
-                <p *ngIf="nameInvalid" class="error-text">Your name is required</p>
-                <img *ngIf="nameInvalid" src="assets/img/input-error.png">
+                <input type="name" placeholder=" " formControlName="name"
+                    [class.error-border]="
+                    contactForm.get('name')?.hasError('required') && isSubmitted">
+                <label>Your name</label>
+                <p *ngIf="
+                    contactForm.get('name')?.hasError('required') && isSubmitted" 
+                    class="error-text">Your name is required
+                </p>
+                <img *ngIf="
+                    contactForm.get('name')?.hasError('required') && isSubmitted"  
+                    src="assets/img/input-error.png">
             </div>
 
             <div class="formfield">
-              <input type="email" name="email" placeholder=" " required #mailField 
-              [class.error-border]="emailInvalid"
-              (invalid)="emailIsInvalid()"
-              (input)="emailInvalid=false">
-              <label [class.error-label]="emailInvalid">Your email</label>
-              <p *ngIf="emailInvalid" class="error-text">Your email is required</p>
-              <img *ngIf="emailInvalid" src="assets/img/input-error.png">
+                <input type="email" placeholder=" " formControlName="email"
+                    [class.error-border]="
+                    contactForm.get('email')?.hasError('required') && 
+                    (contactForm.get('email')?.hasError('email') || isSubmitted)">
+                <label>Your email</label>
+                <p *ngIf="
+                    contactForm.get('email')?.hasError('required') && 
+                    (contactForm.get('email')?.hasError('email') || isSubmitted)" 
+                    class="error-text">Your email is required
+            </p>
+                <img *ngIf="
+                    contactForm.get('email')?.hasError('required') && 
+                    (contactForm.get('email')?.hasError('email') || isSubmitted)" 
+                    src="assets/img/input-error.png">
             </div>
 
             <div class="formfield">
-              <textarea name="message" placeholder=" " required #messageField 
-              [class.error-border]="messageInvalid"
-              (invalid)="messageIsinvalid()"
-              (input)="messageInvalid=false"></textarea>
-              <label [class.error-label]="messageInvalid">Your message</label>
-              <p *ngIf="messageInvalid" class="error-text">Your message is empty</p>
-              <img *ngIf="messageInvalid" src="assets/img/input-error.png">
+                <textarea placeholder=" "  formControlName="message"
+                    [class.error-border]="
+                    contactForm.get('message')?.hasError('required') && 
+                    (contactForm.get('message')?.hasError('minlength') || isSubmitted)">
+                </textarea>
+              <label>Your message</label>
+              <p *ngIf="
+                    contactForm.get('message')?.hasError('required') && 
+                    (contactForm.get('message')?.hasError('minlength') || isSubmitted)" 
+                    class="error-text">Your message should have at least 20 letters
+            </p>
+                <img *ngIf="
+                    contactForm.get('message')?.hasError('required') && 
+                    (contactForm.get('message')?.hasError('minlength') || isSubmitted)" 
+                    src="assets/img/input-error.png">
             </div>
 
             <div class="button">
@@ -49,5 +68,4 @@
 </div>
 
 <div (click)="scroll('header')" routerLink="/" class="arrow-up"></div>
-
 

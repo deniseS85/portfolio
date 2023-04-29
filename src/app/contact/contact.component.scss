@@ -51,14 +51,14 @@
                 .error-border {
                     border: 1px solid #E61C40;
                 }
+                .error-label {
+                    color: #E61C40;
+                }
                 img {
                     position: absolute;
                     right: 14px;
                     top: 11px;
                 }
-                /* .error-label {
-                    color: #E61C40;
-                } */
             }
             input, textarea {
                 font-family: 'Poppins';
@@ -79,15 +79,22 @@
             textarea {
                 height: 180px;
                 resize: none;  
+                margin-bottom: -6px
             }
             input:focus, textarea:focus {
                 border-color: #9747FF;  
+                &:hover {
+                    border-color: #1CDAE6;
+                }
             }
             input:focus + label, textarea:focus + label {
                 color: #9747FF;
                 top: 0;
                 transform: translateY(-50%) scale(.9);
                 background-color: #141D2F;
+            }
+            input:focus:hover + label, textarea:focus:hover + label {
+                color: #1CDAE6;
             }
             input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
                 top: 0;
@@ -96,12 +103,12 @@
             }
             input:not(:placeholder-shown):hover + label, textarea:not(:placeholder-shown):hover + label {
                 color: #1CDAE6;
+            } 
+            input:-webkit-autofill, input:-webkit-autofill:focus {
+                transition: background-color 600000s 0s, color 600000s 0s;
             }
-            input:hover, textarea:hover {
-                border-color: #1CDAE6;
-            }
-            input:focus:hover + label, textarea:focus:hover + label {
-                color: #1CDAE6;
+            input[data-autocompleted] {
+                background-color: transparent !important;
             }
             label {
                 position: absolute;
@@ -145,7 +152,6 @@
         }
     }
 }
-
 
 .arrow-up {
     margin-top: 50px;

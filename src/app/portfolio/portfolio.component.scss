@@ -1,3 +1,19 @@
+@mixin buttonStyle() {
+    width: 152px;
+    height: 58px;
+    border-radius: 10px;
+    margin-top: 30px;
+    font-size: 23px;
+    padding: 15px 30px;
+    gap: 10px;
+    background-color: var(--purple);
+    color: var(--white);  
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    border: none;
+}
+
 .portfolio-container {
     position: relative;
     .headline-portfolio {
@@ -78,25 +94,19 @@
             }
         } 
         .buttons {
-            button {
-                width: 152px;
-                height: 58px;
-                border-radius: 10px;
-                margin-top: 30px;
+            .button-right, button {
+                @include buttonStyle();
                 margin-right: 50px;
-                font-size: 23px;
-                padding: 15px 30px;
-                gap: 10px;
-                background-color: var(--purple);
-                color: var(--white);  
-                z-index: 1;
-                cursor: pointer;
-                transition: 0.2s ease-in;
-                border: none;
+                margin-left: 0;
                 &:hover {
                     background-color: var(--light-blue);
                     transition: 0.2s ease-in;
                 }
+            }
+            .button-left, button {
+                @include buttonStyle();
+                margin-left: 50px;
+                margin-right: 0;
             }
             .github-btn {
                 background-color: var(--background);
