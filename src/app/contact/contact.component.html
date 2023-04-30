@@ -7,63 +7,83 @@
     <div class="content-left">
         <div>Got a problem to solve?</div>
         <div>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</div>
-        <div>Need a Frontend developer? <span>Contact me!</span></div>
+        <div>Need a Frontend developer? 
+            <span>Contact me!</span>
+        </div>
     </div>
+
     <div class="content-right">
         <form [formGroup]="contactForm" (submit)="sendMail()">
             <div class="formfield">
                 <input type="name" placeholder=" " formControlName="name"
                     [class.error-border]="
-                    contactForm.get('name')?.hasError('required') && isSubmitted">
+                    contactForm.get('name')?.hasError('required') && isSubmitted && !emailSent"
+                    [class.succes-border]="contactForm.get('name')?.valid">
                 <label>Your name</label>
                 <p *ngIf="
-                    contactForm.get('name')?.hasError('required') && isSubmitted" 
+                    contactForm.get('name')?.hasError('required') && isSubmitted && !emailSent" 
                     class="error-text">Your name is required
                 </p>
                 <img *ngIf="
-                    contactForm.get('name')?.hasError('required') && isSubmitted"  
+                    contactForm.get('name')?.hasError('required') && isSubmitted && !emailSent"  
                     src="assets/img/input-error.png">
+                <img *ngIf="
+                    contactForm.get('name')?.valid"  
+                    src="assets/img/input-success.png">
             </div>
 
             <div class="formfield">
                 <input type="email" placeholder=" " formControlName="email"
                     [class.error-border]="
-                    contactForm.get('email')?.hasError('required') && 
-                    (contactForm.get('email')?.hasError('email') || isSubmitted)">
+                    (contactForm.get('email')?.hasError('required') && isSubmitted && !emailSent) ||
+                    (contactForm.get('email')?.hasError('email') && isSubmitted && !emailSent)"
+                    [class.succes-border]="contactForm.get('email')?.valid">
                 <label>Your email</label>
                 <p *ngIf="
-                    contactForm.get('email')?.hasError('required') && 
-                    (contactForm.get('email')?.hasError('email') || isSubmitted)" 
-                    class="error-text">Your email is required
-            </p>
+                    (contactForm.get('email')?.hasError('required') && isSubmitted && !emailSent) ||
+                    (contactForm.get('email')?.hasError('email') && isSubmitted && !emailSent)" 
+                    class="error-text">Your email is not valid
+                </p>
                 <img *ngIf="
-                    contactForm.get('email')?.hasError('required') && 
-                    (contactForm.get('email')?.hasError('email') || isSubmitted)" 
+                    (contactForm.get('email')?.hasError('required') && isSubmitted && !emailSent) ||
+                    (contactForm.get('email')?.hasError('email') && isSubmitted && !emailSent)" 
                     src="assets/img/input-error.png">
+                <img *ngIf="
+                    contactForm.get('email')?.valid"  
+                    src="assets/img/input-success.png">
             </div>
 
             <div class="formfield">
                 <textarea placeholder=" "  formControlName="message"
                     [class.error-border]="
-                    contactForm.get('message')?.hasError('required') && 
-                    (contactForm.get('message')?.hasError('minlength') || isSubmitted)">
+                    (contactForm.get('message')?.hasError('required') && isSubmitted && !emailSent) ||
+                    (contactForm.get('message')?.hasError('minlength') && isSubmitted && !emailSent)"
+                    [class.succes-border]="contactForm.get('message')?.valid">
                 </textarea>
-              <label>Your message</label>
-              <p *ngIf="
-                    contactForm.get('message')?.hasError('required') && 
-                    (contactForm.get('message')?.hasError('minlength') || isSubmitted)" 
+                <label>Your message</label>
+                <p *ngIf="
+                    (contactForm.get('message')?.hasError('required') && isSubmitted && !emailSent) ||
+                    (contactForm.get('message')?.hasError('minlength') && isSubmitted && !emailSent)" 
                     class="error-text">Your message should have at least 20 letters
-            </p>
+                </p>
                 <img *ngIf="
-                    contactForm.get('message')?.hasError('required') && 
-                    (contactForm.get('message')?.hasError('minlength') || isSubmitted)" 
+                    (contactForm.get('message')?.hasError('required') && isSubmitted && !emailSent) ||
+                    (contactForm.get('message')?.hasError('minlength') && isSubmitted && !emailSent)" 
                     src="assets/img/input-error.png">
+                <img *ngIf="
+                    contactForm.get('message')?.valid"  
+                    src="assets/img/input-success.png">
             </div>
 
             <div class="button">
-                <button type="submit" #sendBtn>Send message :)</button>
+                <button type="submit">Send message :)</button>
             </div>
         </form>
+
+        <div *ngIf="isSubmitted && emailSent">
+            <span *ngIf="emailSent">Email successfully sent.</span>
+        </div>
+
     </div>
 </div>
 
