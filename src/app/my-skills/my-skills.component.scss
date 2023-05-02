@@ -38,6 +38,16 @@
         div:nth-child(1) {
             font-size: 90px;
             font-family: 'Poppins bold';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .line-my-skills {
+                position: absolute;
+               
+                right: 0;
+                width: 58px;
+                height: 4px;
+            }
         }
         div:nth-child(2) {
             font-size: 16px;
@@ -65,13 +75,6 @@
                 margin-top: 40px;
             }
         }
-    }
-    .line-my-skills {
-        position: absolute;
-        top: 1691px;
-        right: 0;
-        width: 58px;
-        height: 4px;
     }
 }
 

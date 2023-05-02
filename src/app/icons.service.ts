@@ -14,8 +14,8 @@ export class IconsService {
       url: 'https://github.com/deniseS85'
     },
     {
-      image: 'assets/img/mail-icon.png',
-      url: '#contact'
+      image: 'assets/img/xing-icon.png',
+      url: 'https://www.xing.com/profile/Denise_Siegl05560/cv'
     },
     {
       image: 'assets/img/linkedin-icon.png',

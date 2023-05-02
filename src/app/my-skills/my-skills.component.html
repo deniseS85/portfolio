@@ -1,4 +1,4 @@
-<div class="my-skills-container">
+<div class="my-skills-container" #myskills>
     <div class="skills-icons">
         <div class="icons" *ngFor="let skill of skills">
             <img src="assets/img/{{ skill.icon }}">
@@ -6,11 +6,13 @@
         </div>
     </div>
     <div class="my-skills">
-        <div id="skills">My skills</div>
+        <div id="skills">My skills
+            <img class="line-my-skills" src="assets/img/line-my-skills.png">
+        </div>
         <div>I have gained experience in building projects with various front end technologies and concepts.</div>
         <button (click)="scroll('contact')" routerLink="/contact">Get in touch</button>
     </div>
-    <img class="line-my-skills" src="assets/img/line-my-skills.png">
+    
 </div>
 
 <img class="shadow-skills" src="assets/img/shadow-skills.png">

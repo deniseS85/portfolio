@@ -8,7 +8,7 @@
         width: 578px;
         height: 510px;
         position: relative;
-        z-index: -1;
+        z-index: -2;
         img:nth-child(1) {
             width: 646px;
             position: absolute;
@@ -92,17 +92,16 @@
     .banner {
         position: absolute;
         z-index: -2;
-        top: 400px;
+        top: 350px;
         width: 100%;
         height: 70vh;
     }
 }
 
-
 .info-content {
     display: flex;
     justify-content: space-between;
-    margin-top: 220px;
+    margin-top: 100px;
     z-index: 1;
     .info-icons {
         display: flex;

@@ -15,4 +15,6 @@ export class AboutMeComponent {
   public scroll(elementId: string): void { 
     this.viewportScroller.scrollToAnchor(elementId);
   }
+
+
 }
