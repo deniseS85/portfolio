@@ -21,8 +21,5 @@ export class IconsService {
       image: 'assets/img/linkedin-icon.png',
       url: 'https://www.linkedin.com/in/denise-siegl-708020274'
     }
-   
   ]
-
-  
 }

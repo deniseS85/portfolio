@@ -1,7 +1,9 @@
 <div class="my-skills-container" #myskills>
     <div class="skills-icons">
         <div class="icons" *ngFor="let skill of skills">
-            <img src="assets/img/{{ skill.icon }}">
+            <img #image src="assets/img/{{ skill.icon }}" ng-mouseover="isHover = true" ng-mouseleave="isHover = false"
+            [ngStyle]="{'{{skill.color_hover}}':isHover}"
+            >
             <div>{{ skill.name }}</div>
         </div>
     </div>
