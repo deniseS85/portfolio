@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -11,41 +11,38 @@ import { FormBuilder, Validators } from '@angular/forms';
 
 export class ContactComponent {
     minLength: number = 20;
+    minLengthName: number = 3;
     isSubmitted: boolean = false;
     emailSent: boolean = false;
+    @ViewChild('myForm') myForm!: ElementRef;
 
 
     contactForm = this.fb.group({
-        name: ['', Validators.required],
+        name: ['', [Validators.required, Validators.minLength(this.minLengthName)]],
         email: ['', [Validators.required, Validators.email]],
         message: ['', [Validators.required, Validators.minLength(this.minLength)]],
     });
 
 
   constructor(private viewportScroller: ViewportScroller, private fb: FormBuilder) {}
-    
-
+  
   async sendMail() {
       if (!this.contactForm.invalid) {
           await fetch('https://denise-siegl.developerakademie.net/send_mail/send_mail.php',
               { method: 'POST', body: this.setFormData() }
           );
-          this.emailSent = true;
-          console.log('email gesendet')
-          this.contactForm.reset();
+            this.emailSent = true;
+            this.myForm.nativeElement.classList.add('success-sent');
+            this.contactForm.reset();   
       } else {
-        this.emailSent = false;
-        console.log('email nicht gesendet')
+            this.emailSent = false;
       }
-
       this.isSubmitted = true;
-  /* 
-  setTimeout(() => {
-              this.isSubmitted = false;
-              this.contactForm.reset();
-          }, 3000);
-  */
-    
+      setTimeout(() => {
+        this.isSubmitted = false;
+        this.myForm.nativeElement.classList.remove('success-sent');
+    }, 3000);
+
   }
 
 
@@ -62,5 +59,7 @@ export class ContactComponent {
   public scroll(elementId: string): void { 
       this.viewportScroller.scrollToAnchor(elementId);
   }
+
 }
+
 

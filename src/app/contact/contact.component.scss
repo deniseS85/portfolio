@@ -34,10 +34,12 @@
     }
     .content-right {
         width: 617px;
+        position: relative;
         form {
             display: flex;
             flex-direction: column;
             height: 440px;
+            width: 595px;
             justify-content: space-between;
             .formfield {
                 position: relative;
@@ -54,7 +56,7 @@
                 }
                 img {
                     position: absolute;
-                    right: 14px;
+                    right: -2px;
                     top: 11px;
                 }
                 .succes-border {
@@ -76,6 +78,7 @@
                 border: 1px solid var(--purple);
                 border-radius: 10px;  
                 padding: 15px 25px;
+                padding-right: 41px;
                 color: var(--white);
                 transition: 0.2s ease-out;
                 background-color: #141D2F;
@@ -95,6 +98,7 @@
                     border-color: var(--turquoise);
                 }
             }
+            /*  */
             input:focus + label, textarea:focus + label {
                 color: var(--purple);
                 top: 0;
@@ -104,17 +108,12 @@
             input:focus:hover + label, textarea:focus:hover + label {
                 color: var(--turquoise);
             }
+            /*  */
             input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
                 top: 0;
                 transform: translateY(-50%) scale(.9);
                 color: var(--purple);
             }
-            input:not(:placeholder-shown)[required] + label[required] {
-                color: var(--red);
-            }
-            input:not(:placeholder-shown):hover + label, textarea:not(:placeholder-shown):hover + label {
-                color: var(--turquoise);
-            } 
             input:-webkit-autofill, input:-webkit-autofill:focus {
                 transition: background-color 600000s 0s, color 600000s 0s;
             }
@@ -151,7 +150,7 @@
                     cursor: pointer;
                     transition: 0.2s ease-in;
                     border: none;
-                    &:hover {
+                    &:not([disabled]):hover {
                         background-color: var(--purple);
                         width: 261px;
                         height: 68px;
@@ -159,9 +158,38 @@
                         margin: -5px;
                     }
                 } 
+                button:disabled {
+                    cursor: default;
+                }
+            }
+        }
+        .contact-popup {
+            margin: 0 auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 103%;
+            height: 65%;
+            top: 1px;
+            span {
+                font-size: 18px;
+                text-align: center;
+                padding: 10px 20px;
+                color: white;
+                background-color: var(--purple);
+                border: 1px solid var(--turquoise);
+                border-radius: 10px;
             }
         }
     }
+}
+
+.success-sent {
+    opacity: 0.5;
 }
 
 .arrow-up {
