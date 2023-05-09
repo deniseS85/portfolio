@@ -74,9 +74,9 @@
             </div>
         </form>
 
-        <div *ngIf="isSubmitted && emailSent" class="contact-popup">
+        <div *ngIf="isSubmitted && (emailSent || !emailSent)" class="contact-popup">
             <span *ngIf="emailSent">Email successfully sent</span>
-            <span *ngIf="!emailSent">Email not sent.<br>Please try again later</span>
+            <span *ngIf="!emailSent && contactForm.valid">Email not sent.<br>Please try again later</span>
         </div> 
     </div>
 </div>
