@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { IconsService } from '../icons.service';
 
@@ -13,10 +13,10 @@ import { IconsService } from '../icons.service';
 
 export class HeaderComponent {
 
-
   constructor(private viewportScroller: ViewportScroller, public is: IconsService) {}
 
   currentActive: number = 0;
+  @ViewChild('navResponsiv') navResponsiv!: ElementRef;
 
 
   @HostListener('window:scroll', ['$event'])

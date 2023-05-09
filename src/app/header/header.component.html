@@ -5,4 +5,11 @@
         <a (click)="scroll('skills')" routerLink="/skills" routerLinkActive="active" [ngClass]="{'active': currentActive === 2}">Skills</a>
         <a (click)="scroll('portfolio')" routerLink="/portfolio" routerLinkActive="active" [ngClass]="{'active': currentActive === 3}">Portfolio</a>
     </nav>
+
+    <div (click)="navResponsiv.classList.toggle('open')" class="nav-responsiv" #navResponsiv>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 </header>
