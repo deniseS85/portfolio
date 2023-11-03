@@ -52,8 +52,8 @@ header {
 
 .nav-responsiv {
     display: none;
-    width: 45px;
-    height: 34px;
+    width: 40px;
+    height: 37px;
     position: relative;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
@@ -102,6 +102,7 @@ header {
 @media (max-width: 710px) {
     header {
         padding: 20px 50px; 
+        height: 40px;
         nav {
             a {
                 display: none;
@@ -109,6 +110,10 @@ header {
         }
         .nav-responsiv {
             display: flex;
+        }
+        img {
+            width: 60px;
+            height: 60px;
         }
     }
 }
