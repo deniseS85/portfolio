@@ -39,19 +39,19 @@ export class ContactComponent {
             } else { 
               this.emailSent = true;
               this.myForm.nativeElement.classList.add('success-sent');
+              this.contactForm.reset();
             }
         } else {
               this.emailSent = false;
         }
         this.isSubmitted = true;
-        this.contactForm.reset();  
 
         setTimeout(() => {
           this.isSubmitted = false;
           this.myForm.nativeElement.classList.remove('success-sent');
       }, 3000);
-    } 
 
+    } 
 
     setFormData() {
         const data:any = this.contactForm.value;
