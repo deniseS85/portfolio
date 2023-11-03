@@ -29,7 +29,7 @@ export class ContactComponent {
   
     async sendMail() {
         if (!this.contactForm.invalid) {
-            let response = await fetch('https://denise-siegl.developerakademie.net/send_mail/send_mail.php',
+            let response = await fetch('https://denise.selfcoders.com/send_mail/send_mail.php',
                 { method: 'POST', body: this.setFormData() }
 
             );

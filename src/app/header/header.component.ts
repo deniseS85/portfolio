@@ -1,7 +1,6 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { IconsService } from '../icons.service';
-
 
 
 @Component({
@@ -21,6 +20,7 @@ export class HeaderComponent {
 
   @HostListener('window:scroll', ['$event'])
     checkOffsetTop() {
+      
       if (window.pageYOffset > 635 && window.pageYOffset < 1254) {
         this.currentActive = 1;
       } else if (window.pageYOffset > 1255 && window.pageYOffset < 1851) {
@@ -35,6 +35,7 @@ export class HeaderComponent {
 
   public scroll(elementId: string): void { 
     this.viewportScroller.scrollToAnchor(elementId);
+
   }
 }
 

@@ -102,12 +102,14 @@ header {
 @media (max-width: 710px) {
     header {
         padding: 20px 50px; 
-    }
-    nav a {
-        display: none;
-    }
-    .nav-responsiv {
-        display: flex;
+        nav {
+            a {
+                display: none;
+            }
+        }
+        .nav-responsiv {
+            display: flex;
+        }
     }
 }
   

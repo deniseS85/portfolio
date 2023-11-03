@@ -83,7 +83,7 @@
                 transition: 0.2s ease-out;
                 background-color: #141D2F;
                 line-height: 17px;
-                 &:hover {
+                &:hover {
                     border: 1px solid var(--turquoise);
                 }
             }
@@ -98,7 +98,6 @@
                     border-color: var(--turquoise);
                 }
             }
-            /*  */
             input:focus + label, textarea:focus + label {
                 color: var(--purple);
                 top: 0;
@@ -108,7 +107,6 @@
             input:focus:hover + label, textarea:focus:hover + label {
                 color: var(--turquoise);
             }
-            /*  */
             input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
                 top: 0;
                 transform: translateY(-50%) scale(.9);

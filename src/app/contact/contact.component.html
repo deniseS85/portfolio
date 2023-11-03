@@ -19,7 +19,7 @@
                     [class.error-border]="(contactForm.get('name')?.hasError('required') && isSubmitted && !emailSent) ||
                     (contactForm.get('name')?.hasError('minlength') && isSubmitted && !emailSent)"
                     [class.succes-border]="contactForm.get('name')?.valid">
-                <label>Your name</label>
+                <label [class.success-label]="contactForm.get('name')?.valid">Your name</label>
                 <p *ngIf="contactForm.get('name')?.valid && isSubmitted && !emailSent" class="error-box"></p>
                 <p *ngIf="(contactForm.get('name')?.hasError('required') && isSubmitted && !emailSent) ||
                     (contactForm.get('name')?.hasError('minlength') && isSubmitted && !emailSent)" 
@@ -37,7 +37,7 @@
                     [class.error-border]="(contactForm.get('email')?.hasError('required') && isSubmitted && !emailSent) ||
                     (contactForm.get('email')?.hasError('email') && isSubmitted && !emailSent)"
                     [class.succes-border]="contactForm.get('email')?.valid">
-                <label>Your email</label>
+                <label [class.success-label]="contactForm.get('email')?.valid">Your email</label>
                 <p *ngIf="contactForm.get('email')?.valid && isSubmitted" class="error-box"></p>
                 <p *ngIf="(contactForm.get('email')?.hasError('required') && isSubmitted && !emailSent) ||
                     (contactForm.get('email')?.hasError('email') && isSubmitted && !emailSent)" 
@@ -56,7 +56,7 @@
                     (contactForm.get('message')?.hasError('minlength') && isSubmitted && !emailSent)"
                     [class.succes-border]="contactForm.get('message')?.valid">
                 </textarea>
-                <label>Your message</label>
+                <label [class.success-label]="contactForm.get('message')?.valid">Your message</label>
                 <p *ngIf="contactForm.get('message')?.valid && isSubmitted && !emailSent" class="error-box"></p>
                 <p *ngIf="(contactForm.get('message')?.hasError('required') && isSubmitted && !emailSent) ||
                     (contactForm.get('message')?.hasError('minlength') && isSubmitted && !emailSent)" 
