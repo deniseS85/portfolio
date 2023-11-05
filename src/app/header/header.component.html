@@ -5,7 +5,8 @@
         <a (click)="scroll('aboutMe')" routerLink="/aboutMe" routerLinkActive="active" [ngClass]="{'active': currentActive === 1}">About me</a>
         <a (click)="scroll('skills')" routerLink="/skills" routerLinkActive="active" [ngClass]="{'active': currentActive === 2}">Skills</a>
         <a (click)="scroll('portfolio')" routerLink="/portfolio" routerLinkActive="active" [ngClass]="{'active': currentActive === 3}">Portfolio</a>
-        <a (click)="scroll('contact')" routerLink="/contact" *ngIf="navResponsiv.classList.contains('open')">Contact</a>
+        <a (click)="scroll('contact')" routerLink="/contact" routerLinkActive="active" [ngClass]="{'active': currentActive === 4}">Contact
+        </a>
     </nav>
 
     <div (click)="navResponsiv.classList.toggle('open')" class="nav-responsiv" #navResponsiv>
@@ -15,24 +16,4 @@
         <span></span>
     </div>
 
-   <!--  <div [class.nav-responsiv-menu]="navResponsiv.classList.contains('open')"> -->
-       <!--  <a (click)="scroll('aboutMe')" routerLink="/aboutMe">About Me</a>
-        <a (click)="scroll('skills')" routerLink="/skills">My Skills</a>
-        <a (click)="scroll('portfolio')" routerLink="/portfolio">Portfolio</a>
-        <a>Contact</a> -->
-   <!--  </div> -->
 </header>
-
-<!-- 
-    <nav class="navBar" [class.active]="isMenuOpen && isMobileResolution">
-        <a href="#home" [class.active]="isActiveHome" (click)="closeMenu()">Home</a>
-        <a href="#about" [class.active]="isActiveAbout" (click)="closeMenu()">About Me</a>
-        <a href="#skills" [class.active]="isActiveSkills" (click)="closeMenu()">Skills</a>
-        <a href="#my-work" [class.active]="isActiveMyWork" (click)="closeMenu()">Portfolio</a>
-        <a href="#contact" [class.active]="isActiveContact" (click)="closeMenu()">Contact</a>
-        <span class="active-nav"></span>
-    </nav>
-    <img src="/assets/icons/burger-menu.svg" class="burger-menu" *ngIf="!isMenuOpen && isMobileResolution"
-        (click)="toggleMenu()">
-    <img src="/assets/icons/close.svg" class="close" *ngIf="isMenuOpen && isMobileResolution" (click)="toggleMenu()">
-</header> -->
