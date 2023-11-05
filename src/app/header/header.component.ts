@@ -14,7 +14,6 @@ export class HeaderComponent {
   
   constructor(private viewportScroller: ViewportScroller, public is: IconsService) {}
 
-
   currentActive: number = 0;
   @ViewChild('navResponsiv') navResponsiv!: ElementRef;
 

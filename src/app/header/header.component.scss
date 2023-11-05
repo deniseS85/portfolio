@@ -36,9 +36,6 @@ header {
             }
         }
     }
-    .nav-responsiv-menu, .close-nav-responsiv-animation {
-        display: none;
-    }
 }
 
 .active::after {
@@ -107,9 +104,8 @@ header {
         padding: 20px 50px; 
         height: 40px;
         nav {
-            a {
-                display: none;
-            }
+            display: none;
+           
         }
         .nav-responsiv {
             display: flex;
@@ -141,14 +137,14 @@ header {
         }
         .close-nav-responsiv-animation {
             /* display: flex; */
-            position: absolute;
+           /*  position: absolute;
             bottom: 0px;
             top: 79px;
             left: 0px;
             right: -100%;
             width: 100%;
             height: 100vh;
-            background-color: var(--background);
+            background-color: var(--background); */
             animation: closeMenu .3s linear;
         }
     }
