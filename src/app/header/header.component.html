@@ -7,9 +7,17 @@
     </nav>
 
     <div (click)="navResponsiv.classList.toggle('open')" class="nav-responsiv" #navResponsiv>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
+
+    <div [ngClass]="navResponsiv.classList.contains('open') ? 'nav-responsiv-menu' : 'close-nav-responsiv-animation'">
+        <a (click)="scroll('aboutMe')" routerLink="/aboutMe">About Me</a>
+        <a (click)="scroll('skills')" routerLink="/skills">My Skills</a>
+        <a (click)="scroll('portfolio')" routerLink="/portfolio">Portfolio</a>
+        <a>Contact</a>
+    </div>
+
 </header>
