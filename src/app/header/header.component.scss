@@ -167,6 +167,20 @@ header {
         }
     }
 }
+
+@media  only screen and (min-width:2000px) {
+    header {
+        img {
+            width: 6.944vw !important;
+            height: 6.944vw !important;
+        }
+    }
+    nav {
+        a {
+            font-size: 1.597vw !important;
+        }
+    }
+}
   
 
 
