@@ -1,4 +1,4 @@
-<div class="about-me-section" id="header">
+<!-- <div class="about-me-section" id="header">
     <div class="profile">
         <img src="assets/img/profile-shadow-left.png">
         <img src="assets/img/profile-shadow-right.png">
@@ -32,8 +32,8 @@
         <p class="scroll-info">Scroll down</p>
         <img src="assets/img/arrow-down.png">
     </div>
-</div>
-
+</div> -->
+<!-- 
 <div class="about-me-content" #myaboutme>
     <div class="content-left">
         <div id="aboutMe" class="header-about-me-content">About Me</div>
@@ -53,7 +53,68 @@
     </div>
 </div>
 
-<img class="scroll-down-shadow" src="assets/img/scroll-down-shadow.png">
+<img class="scroll-down-shadow" src="assets/img/scroll-down-shadow.png"> -->
 
 
+<div class="about-me-content" id="header">
+    <div class="my-profile-container">
+        <div class="profile">
+            <img src="assets/img/profile-shadow-left.png">
+            <img src="assets/img/profile-shadow-right.png">
+            <img src="assets/img/character.png">
+        </div>
+        <div class="profile-content-right">
+            <div class="info-profile">
+                <span class="pretext-info-profile">I am</span>
+                <div class="subinfo-profile">
+                    <div>Denise Siegl</div>
+                    <div>FRONTEND DEVELOPER</div>
+                </div>
+            </div>
+            <button (click)="scroll('contact')" routerLink="/contact">Let's talk!</button>
+        </div>
+    </div>
 
+
+    <img class="banner" src="assets/img/banner.png">
+    <div class="info-icons">
+        <img src="assets/img/line-info-profile.png">
+        <a *ngFor="let icon of is.infoIcons" href="{{ icon.url }}" target="{{!icon.url.includes('#')  ? '_blank' : '_self'}}">
+            <img src="{{ icon.image }}">
+        </a>
+        <p>
+            <img (click)="scroll('contact')" routerLink="/contact" src="assets/img/email-image.png">
+        </p>
+        <div class="scroll">
+            <p class="scroll-info">Scroll down</p>
+            <img src="assets/img/arrow-down.png">
+        </div>
+    </div>
+</div>
+
+<!-- <section class="home" id="home">
+    <div class="parent-container">
+        <div class="img-box">
+            <img class="img-home" src="/assets/img/my-img.png">
+        </div>
+        <div class="home-content">
+            <span class="traslate">I am</span>
+            <div class="change-text">
+                <h1>Hosny Fahim</h1>
+                <span>{{ currentWord }}</span>
+                <div class="btn-box">
+                    <a href="#contact" class="btn">Let's Talk</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <img class="bottom-img" src="/assets/img/Vector.svg">
+    <div class="home-socials">
+        <div class="left-line"></div>
+        <a href="https://github.com/HosnyFahim" target="_blank"><img src="./assets/icons/github.svg"></a>
+        <a href="https://linkedin.com/in/hosny-fahim-860766236" target="_blank"><img
+                src="./assets/icons/linkedin.svg"></a>
+        <a href="mailto: hosny.fahim1990@gmail.com" target="_blank"><img class="mail" src="./assets/icons/mail.svg"></a>
+    </div>
+</section> -->

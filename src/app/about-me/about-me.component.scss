@@ -1,4 +1,4 @@
-.about-me-section { 
+/* .about-me-section { 
     margin-top: 114px;
     display: flex;
     align-items: center;
@@ -35,7 +35,6 @@
         flex-direction: column;
         align-items: center;
         margin-right: 87px;
-       /*  width: 725px; */
         justify-content: space-between;
         position: absolute;
         right: 0;
@@ -57,7 +56,7 @@
             flex-direction: column;
             div:nth-child(1) {
                 color: var(--white);
-                font-size: 89px;
+                font-size: 84px;
                 font-family: 'Poppins bold';
                 letter-spacing: 6.2px;
             }
@@ -95,8 +94,8 @@
         position: absolute;
         z-index: -2;
         top: 350px;
-        width: 100%;
         height: 100%;
+        
     }
 }
 
@@ -228,5 +227,148 @@
     }
 }
 
+@media only screen and (max-width: 1000px) {
+}
+    
 
 
+
+
+ */
+
+
+
+.about-me-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    .my-profile-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        .profile {
+           position: relative;
+            img:nth-child(1) {
+                width: 38.861vw;
+                position: absolute;
+                left: -3.778vw;
+                top: 0vw;
+                z-index: -1;
+            }
+            img:nth-child(2) {
+                width: 38.764vw;
+                position: absolute;
+                right: -4.444vw;
+                top: 0.597vw;
+                z-index: -2;
+            }
+            img:nth-child(3) {
+                width: 40vw;
+                height: auto;
+            }
+        }
+        .profile-content-right {
+            position: relative;
+            margin-bottom: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .info-profile {
+                .pretext-info-profile {
+                    position: absolute;
+                    top: 0;
+                    display: inline-block;
+                    transform: rotate(-90deg);
+                    width: max-content;
+                    font-size: clamp(2.5rem, -0.625rem + 5vw, 4.375rem);
+                    color: var(--white);
+                    height: -moz-fit-content;
+                    height: fit-content;
+                    margin-top: 10%;
+                    left: -18%;
+                }
+                .subinfo-profile {
+                    div:nth-child(1) {
+                        font-size: clamp(3.75rem, -1.875rem + 7.5vw, 5.625rem);
+                        font-weight: 900;
+                        color: var(--white);
+                        font-family: 'Poppins';
+                        letter-spacing: 6.2px;
+                        width: max-content;
+                    }
+                    div:nth-child(2) {
+                        color: var(--purple);
+                        position: absolute;
+                        display: flex;
+                        width: max-content;
+                        font-size: clamp(2rem, .1761945392rem + 3.0716723549vw, 3.125rem);
+                        font-weight: 600;
+                        top: clamp(5.438rem, 5.143vw + 2.223rem, 7.688rem);
+                    }
+                }
+            }
+            button {
+                width: 165px;
+                height: 58px;
+                border-radius: 10px;
+                margin-top: 50px;
+                font-size: 23px;
+                padding: 15px 30px;
+                gap: 10px;
+                background-color: var(--light-blue);
+                color: var(--white);  
+                z-index: 1;
+                cursor: pointer;
+                transition: 0.2s ease-in;
+                border: none;
+                &:hover {
+                    background-color: var(--purple);
+                    width: 185px;
+                    height: 68px;
+                    transition: 0.2s ease-in;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+
+/* 
+@media only screen and (max-width: 1550px) {
+    .profile {
+        img {
+            bottom: 14%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .profile {
+        img {
+            bottom: 16%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .profile {
+        img {
+            bottom: 17%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .profile {
+        display: flex;
+        img {
+            position: static;
+            width: clamp(14rem, 26.528vw + 9.358rem, 25.938rem);
+        }
+    }
+} */
