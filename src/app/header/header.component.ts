@@ -17,34 +17,41 @@ export class HeaderComponent {
 
   @ViewChild('navResponsiv') navResponsiv!: ElementRef;
   
-  ngAfterViewInit(){
-    this.isMenuOpen = this.navResponsiv.nativeElement.classList.contains('open');
+  toggleBodyScroll(){
+      this.isMenuOpen = this.navResponsiv.nativeElement.classList.contains('open');
 
-    if (this.isMenuOpen) {
-      console.log(this.isMenuOpen);
-      this.document.body.style.overflow = 'hidden';
-    }
- }
+      if (this.isMenuOpen) {
+          this.document.body.style.overflow = 'hidden';
+      } else {
+          this.document.body.style.overflow = 'unset';
+      }
+  }
+
+  closeMenu(): void {
+      this.navResponsiv.nativeElement.classList.remove('open');
+      this.isMenuOpen = false;
+  }
+
 
   @HostListener('window:scroll', ['$event'])
     checkOffsetTop() {
       
       if (window.scrollY > 635 && window.scrollY < 1254) {
-        this.currentActive = 1;
+          this.currentActive = 1;
       } else if (window.scrollY > 1255 && window.scrollY < 1851) {
-        this.currentActive = 2;
+          this.currentActive = 2;
       } else if (window.scrollY > 1852 && window.scrollY < 3933) {
-        this.currentActive = 3;
+          this.currentActive = 3;
       } else if (window.scrollY > 3934) {
           this.currentActive = 4;
       } else {
-        this.currentActive = 0;
+          this.currentActive = 0;
       }
   }  
 
 
   public scroll(elementId: string): void { 
-    this.viewportScroller.scrollToAnchor(elementId);
+      this.viewportScroller.scrollToAnchor(elementId);
   }
   
 }
