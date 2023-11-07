@@ -1,38 +1,46 @@
-<!-- <div class="about-me-section" id="header">
-    <div class="profile">
-        <img src="assets/img/profile-shadow-left.png">
-        <img src="assets/img/profile-shadow-right.png">
-        <img src="assets/img/character.png">
-    </div>
+<div class="about-me-content" id="header">
+    <div class="my-profile-container">
+        <div class="profile">
+            <img src="assets/img/profile-shadow-left.png">
+            <img src="assets/img/profile-shadow-right.png">
+            <img src="assets/img/character.png">
+        </div>
 
-    <div class="profile-content-right">
-        <div class="info-profile">
-            <div class="pretext-info-profile">I am</div>
+        <div class="profile-content-right">
+            <span class="pretext-info-profile">I am</span>
             <div class="subinfo-profile">
                 <div>Denise Siegl</div>
                 <div>FRONTEND DEVELOPER</div>
             </div>
+            <button (click)="scroll('contact')" routerLink="/contact">Let's talk!</button>
         </div>
-        <button (click)="scroll('contact')" routerLink="/contact">Let's talk!</button>
     </div>
-    <img class="banner" src="assets/img/banner.png">
-</div>
 
-<div class="info-content">
-    <div class="info-icons">
-        <img src="assets/img/line-info-profile.png">
-        <a *ngFor="let icon of is.infoIcons" href="{{ icon.url }}" target="{{!icon.url.includes('#')  ? '_blank' : '_self'}}">
-            <img src="{{ icon.image }}">
-        </a>
-        <p>
-            <img (click)="scroll('contact')" routerLink="/contact" src="assets/img/email-image.png">
-        </p>
+    <img class="banner" src="assets/img/banner.png">
+
+    <!-- <div class="home-socials">
+            <div class="left-line"></div>
+            <a href="https://github.com/HosnyFahim" target="_blank"><img src="./assets/icons/github.svg"></a>
+            <a href="https://linkedin.com/in/hosny-fahim-860766236" target="_blank"><img
+                src="./assets/icons/linkedin.svg"></a>
+            <a href="mailto: hosny.fahim1990@gmail.com" target="_blank"><img class="mail" src="./assets/icons/mail.svg"></a>
+        </div> -->
+    <div class="info-content">
+        <img class="line-info-profile" src="assets/img/line-info-profile.png">
+        <div class="info-icons">
+            <a *ngFor="let icon of is.infoIcons" href="{{ icon.url }}" target="{{!icon.url.includes('#')  ? '_blank' : '_self'}}">
+                <img src="{{ icon.image }}">
+            </a>
+            <p>
+                <img (click)="scroll('contact')" routerLink="/contact">
+            </p>
+        </div>
+        <div class="scroll">
+            <p class="scroll-info">Scroll down</p>
+            <img src="assets/img/arrow-down.png">
+        </div>
     </div>
-    <div class="scroll">
-        <p class="scroll-info">Scroll down</p>
-        <img src="assets/img/arrow-down.png">
-    </div>
-</div> -->
+</div>
 <!-- 
 <div class="about-me-content" #myaboutme>
     <div class="content-left">
@@ -54,39 +62,3 @@
 </div>
 
 <img class="scroll-down-shadow" src="assets/img/scroll-down-shadow.png"> -->
-
-
-<div class="about-me-content" id="header">
-    <div class="my-profile-container">
-        <div class="profile">
-            <img src="assets/img/profile-shadow-left.png">
-            <img src="assets/img/profile-shadow-right.png">
-            <img src="assets/img/character.png">
-        </div>
-
-        <div class="profile-content-right">
-            <span class="pretext-info-profile">I am</span>
-            <div class="subinfo-profile">
-                <div>Denise Siegl</div>
-                <div>FRONTEND DEVELOPER</div>
-            </div>
-            <button (click)="scroll('contact')" routerLink="/contact">Let's talk!</button>
-        </div>
-    </div>
-
-
-    <img class="banner" src="assets/img/banner.png">
-   <!--  <div class="info-icons">
-        <img src="assets/img/line-info-profile.png">
-        <a *ngFor="let icon of is.infoIcons" href="{{ icon.url }}" target="{{!icon.url.includes('#')  ? '_blank' : '_self'}}">
-            <img src="{{ icon.image }}">
-        </a>
-        <p>
-            <img (click)="scroll('contact')" routerLink="/contact" src="assets/img/email-image.png">
-        </p>
-        <div class="scroll">
-            <p class="scroll-info">Scroll down</p>
-            <img src="assets/img/arrow-down.png">
-        </div>
-    </div> -->
-</div>
