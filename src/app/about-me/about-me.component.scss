@@ -292,44 +292,35 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            padding-left: 10px;
+            padding-left: 2px;
             height: 20vw;
             padding-bottom: 20px;
+            padding-top: 5px;
             .pretext-info-profile {
                 position: absolute;
                 top: 0;
                 transform: rotate(-90deg);
-                width: max-content;
                 font-size: 4.444vw;
                 color: var(--white);
-                height: -moz-fit-content;
-                height: fit-content;
                 margin-top: 10%;
-                left: -22%;
+                left: -24%;
             }
-            .info-profile {
-                .subinfo-profile {
+            .subinfo-profile {
+                div:nth-child(1) {
+                    font-size: 4.833vw;
+                    font-weight: 900;
+                    color: var(--white);
+                    font-family: 'Poppins';
+                    letter-spacing: 6.2px;
+                }
+                div:nth-child(2) {
+                    color: var(--purple);
+                    position: absolute;
                     display: flex;
-                    justify-content: center;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    div:nth-child(1) {
-                        font-size: 4.833vw;
-                        font-weight: 900;
-                        color: var(--white);
-                        font-family: 'Poppins';
-                        letter-spacing: 6.2px;
-                        width: max-content;
-                    }
-                    div:nth-child(2) {
-                        color: var(--purple);
-                        position: absolute;
-                        display: flex;
-                        width: max-content;
-                        font-size: 3.3vw;
-                        font-weight: 600;
-                        top: 8vw;
-                    }
+                    font-size: 3.05cqw;
+                    font-weight: 600;
+                    top: 8vw;
+                    letter-spacing: 1px;
                 }
             }
             button {
@@ -364,7 +355,6 @@
 }
 
 
-
 @media only screen and (max-width: 1000px) {
     .about-me-content {
         .my-profile-container {
@@ -389,7 +379,7 @@
             }
             .profile-content-right {
                 z-index: 10;
-                margin-top: -130px;
+                margin-top: -18vw;
                 .pretext-info-profile {
                     font-size: 7vw;
                 }
@@ -399,18 +389,25 @@
                     }
                     div:nth-child(2) {
                         top: 13vw !important;
-                        font-size: 4.65vw !important;
+                        font-size: 4.63cqw !important;
                         letter-spacing: unset !important;
-                    }
-                    
+                    } 
                 }
                 button {
-                    margin-top: 100px;
+                    margin-top: 29%;
                 }
             }
         }
         .banner {
             top: 74vw;
+        }
+    }
+}
+
+@media only screen and (min-width:1600px) {
+    .subinfo-profile {
+        div:nth-child(2) {
+            font-size: 2.92cqw !important;
         }
     }
 }
@@ -426,5 +423,4 @@
             height: 4.722vw !important;
         }
     }
-    
 }
