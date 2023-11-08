@@ -1,25 +1,25 @@
 .my-skills-container {
-    padding-top: 190px;
-    padding-right: 101px;
     display: flex;
     justify-content: space-between;
+    padding: 0 10% 0 8.8%;
+    position: relative;
+    margin-top: 10%;
     .skills-icons {
-        padding-left: 98px;
         padding-top: 37px;
         display: flex;
-        gap: 36px;
-        width: 650px;
-        height: 414px;
+        gap: 2.5vw;
         flex-wrap: wrap;
         z-index: 1;
         .icons {
             margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             img {
                 width: 55px;
                 height: 55px;
                 object-fit: contain;
-                margin-right: 40px;
-                margin-left: 40px;
+                margin: 0 2.778vw 1vw 2.778vw;
                 &:hover {
                     transform: scale(1.2);
                 }
@@ -34,7 +34,7 @@
         color: var(--white);
         text-align: center;
         div:nth-child(1) {
-            font-size: 90px;
+            font-size: 6.25vw;
             font-family: 'Poppins bold';
             display: flex;
             align-items: center;
@@ -42,13 +42,13 @@
             .line-my-skills {
                 position: absolute;
                 right: 0;
-                width: 58px;
+                width: 10.5vw;
                 height: 4px;
             }
         }
         div:nth-child(2) {
             font-size: 16px;
-            width: 471px;
+            width: 32.708vw;
         }
         button {
             width: 200px;
@@ -73,11 +73,62 @@
             }
         }
     }
+    .shadow-skills {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 }
 
-.shadow-skills {
-    position: absolute;
-    top: 1660px;
-    width: 300px;
-    height: 800px;
+
+@media only screen and (max-width: 1000px) {
+    .my-skills-container {
+        flex-direction: column-reverse;
+        .skills-icons {
+            justify-content: space-evenly;
+        }
+        .my-skills {
+            div:nth-child(1) {
+                font-size: 45px !important;
+                padding: 0 3.32%;
+            }
+            div:nth-child(2) {
+                width: unset !important;
+            }
+        }
+    }
 }
+
+
+@media  only screen and (min-width: 2000px)  {
+    button {
+        width: 11.458vw !important;
+        height: 4.028vw !important;
+        font-size: 1.597vw !important;
+        border-radius: 0.694vw !important;
+        &:hover {
+            width: 12.847vw !important;
+            height: 4.722vw !important;
+        }
+    }
+    .my-skills-container {
+        .skills-icons {
+            .icons {
+                img {
+                    width: 80px !important;
+                    height: 80px !important;
+                }
+            }
+            div {
+                font-size: 26px !important;
+            }  
+        }
+        .my-skills {
+            div:nth-child(2) {
+                font-size: 30px !important;
+            }
+        }
+    }
+}
+
+

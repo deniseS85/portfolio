@@ -325,6 +325,9 @@
                 display: none !important;
             }
         }
+        .subinfo-first, .subinfo-second {
+            padding-left: unset !important;
+        }
     }
 }
 
@@ -345,6 +348,11 @@
         &:hover {
             width: 12.847vw !important;
             height: 4.722vw !important;
+        }
+    }
+    .about-me-content {
+        .present-text, .subinfo-first, .subinfo-second {
+            font-size: 30px !important;
         }
     }
 }
