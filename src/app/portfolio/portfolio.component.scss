@@ -64,10 +64,10 @@
             height: 23.542vw;
             object-fit: contain;
         }
-        .content-right {
+        .content-right, .content-left {
             display: flex;
             flex-direction: column;
-            height: 180px;
+            /* height: 180px; */
             justify-content: space-around;
             width: 52%;
             div:nth-child(1) {
@@ -85,25 +85,7 @@
             }
         }
         .content-left {
-            display: flex;
-            flex-direction: column;
-            height: 180px;
-            justify-content: space-around;
-            width: 52%;
             text-align: right;
-            div:nth-child(1) {
-                color: var(--purple);
-                font-size: 32px;
-                font-family: 'Poppins semibold'; 
-            }
-            div:nth-child(2) {
-                color: var(--light-blue);
-                font-size: 23px;
-            }
-            div:nth-child(3) {
-                color: var(--white);
-                font-size: 16px;
-            }
         } 
         .buttons {
             display: flex;
@@ -130,19 +112,18 @@
             }
         }
     }
-    .shadow-left {
+    .shadow-left, .shadow-right {
         position: absolute;
-        top: 32vw;
         z-index: -1;
-        left: 0;
         width: 30%;
     }
+    .shadow-left {
+        top: 75vw;
+        left: 0;
+    }
     .shadow-right {
-        position: absolute;
         top: 63vw;
-        z-index: -1;
         right: 0;
-        width: 30%;
     }
 }
 
@@ -154,6 +135,7 @@
         }
     }
 }
+
 @media only screen and (max-width: 1000px) {
     .portfolio-container {
         margin-top: 140px;
@@ -165,7 +147,7 @@
         .project {
             flex-direction: column;
             margin-top: unset !important;
-            margin-bottom: 100px !important;
+            margin-bottom: 45px !important;
             img {
                 width: 320px;
                 height: 240px;
@@ -177,15 +159,9 @@
             }
             .content-left {
                 order: 2;
-                div:nth-child(1) {
-                    margin-top: 70px;
-                }
             }
             .content-right {
                 order: 1;
-                div:nth-child(1) {
-                    margin-top: 70px;
-                }
             }
             .buttons {
                 justify-content: space-evenly !important;
@@ -217,10 +193,7 @@
                 div:nth-child(1) {
                     font-size: 50px !important;
                 }
-                div:nth-child(2) {
-                    font-size: 30px !important;
-                }
-                div:nth-child(3) {
+                div:nth-child(2), div:nth-child(3) {
                     font-size: 30px !important;
                 }
             }
