@@ -1,25 +1,29 @@
 .contact {
     display: flex;
     align-items: center;
+    position: relative;
+    padding: 0 0 0 11%;
     div {
         font-family: 'Poppins bold';
-        font-size: 90px;
-        color: var(--white)
+        font-size: 6.25vw;
+        color: var(--white);
     }
     img {
+        width: calc(8% - 20px);
+        position: absolute;
         height: 4px;
-        margin-right: 60px;
+        left: 0;
     }
 }
 
 .contact-content {
     display: flex;
-    justify-content: space-between;
-    padding-left: 115px;
-    padding-right: 100px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 10% 0 11%;
     .content-left {
         color: var(--white);
-        width: 473px;
+        width: 50%;
         div:nth-child(1) {
             font-size: 32px;
             font-family: 'Poppins semibold';
@@ -33,13 +37,15 @@
         }
     }
     .content-right {
-        width: 617px;
+        display: flex;
+        justify-content: right;
+        width: 50%;
         position: relative;
         form {
             display: flex;
             flex-direction: column;
             height: 440px;
-            width: 595px;
+            width: 90%;
             justify-content: space-between;
             .formfield {
                 position: relative;
@@ -200,5 +206,43 @@
     background-image: url('../../assets/img/arrow-up.png');
     &:hover {
         content: url('../../assets/img/arrow-up-hover.png');
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .contact {
+        div {
+            font-size: 45px !important;
+        }
+    } 
+}
+
+@media only screen and (min-width: 2000px) {
+    .contact-content {
+        .content-left {
+            div:nth-child(1) {
+                font-size: 50px !important;
+            }
+            div:nth-child(2), div:nth-child(3) {
+                font-size: 30px !important;
+            }
+        }
+        .content-right {
+            form {
+                height: 549px;
+                label {
+                    font-size: 30px !important;
+                    top: 37px;
+                }
+                .formfield {
+                    .error-text {
+                        font-size: 25px !important;
+                    }
+                }
+            }
+        }
+        input, textarea {
+            font-size: 30px !important;
+        }
     }
 }

@@ -41,7 +41,7 @@
             font-size: 6.25vw;
             font-family: 'Poppins bold';
             display: inline-block;
-            padding: 0 20px;
+            padding: 0 50px;
             z-index: 15;
             background-color: #141d2f;
         }
@@ -56,7 +56,7 @@
         align-items: center;
         margin: auto;
         margin-top: 100px;
-        width: 100%;
+        width: 99%;
         justify-content: space-between;
         box-sizing: border-box;
         img {
@@ -67,7 +67,6 @@
         .content-right, .content-left {
             display: flex;
             flex-direction: column;
-            /* height: 180px; */
             justify-content: space-around;
             width: 52%;
             div:nth-child(1) {

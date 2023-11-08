@@ -49,7 +49,7 @@ export class ContactComponent {
         setTimeout(() => {
           this.isSubmitted = false;
           this.myForm.nativeElement.classList.remove('success-sent');
-      }, 3000);
+      }, 2000);
 
     } 
 
