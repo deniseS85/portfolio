@@ -75,7 +75,7 @@
                 border-radius: 10px;
                 margin-top: 50px;
                 font-size: 23px;
-                padding: 15px 30px;
+                font-family: "Poppins", sans-serif;
                 gap: 10px;
                 background-color: var(--light-blue);
                 color: var(--white);  
@@ -277,6 +277,8 @@
                 }
                 button {
                     margin-top: 29% !important;
+                    font-size: 20px;
+                    padding: 15px 30px;
                 }
             }
         }
@@ -320,7 +322,7 @@
     }
     .about-me-content {
         .header-about-me-content {
-            font-size: 45px !important;
+            font-size: 32px !important;
         }
         .profile-round-container {
             img {

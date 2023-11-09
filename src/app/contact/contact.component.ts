@@ -16,7 +16,7 @@ export class ContactComponent {
     isSubmitted: boolean = false;
     emailSent: boolean = false;
     @ViewChild('myForm') myForm!: ElementRef;
-
+    
 
     contactForm = this.fb.group({
         name: ['', [Validators.required, Validators.minLength(this.minLengthName)]],
@@ -38,7 +38,6 @@ export class ContactComponent {
               throw response;
             } else { 
               this.emailSent = true;
-              this.myForm.nativeElement.classList.add('success-sent');
               this.contactForm.reset();
             }
         } else {
@@ -48,9 +47,7 @@ export class ContactComponent {
 
         setTimeout(() => {
           this.isSubmitted = false;
-          this.myForm.nativeElement.classList.remove('success-sent');
       }, 2000);
-
     } 
 
     setFormData() {
