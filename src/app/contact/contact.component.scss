@@ -198,6 +198,13 @@
             }
         }
     }
+    .shadow {
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        width: 300px;
+        bottom: -40%;
+    }
     .arrow-up {
         position: absolute;
         bottom: -19%;

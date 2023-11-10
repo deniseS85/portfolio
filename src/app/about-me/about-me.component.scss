@@ -264,6 +264,7 @@
                 margin-top: -18vw;
                 .pretext-info-profile {
                     font-size: 7vw;
+                    
                 }
                 .subinfo-profile {
                     div:nth-child(1) {
@@ -297,8 +298,8 @@
                 p {
                     img {
                         content:url("/assets/img/email.png") !important;
-                        width: 8vw !important;
-                        height: 8vw !important;
+                        width: 6vw !important;
+                        height: 6vw !important;
                         &:hover {
                             transform: scale(1.5) !important;
                             transition: 0.2s ease-in !important;
@@ -306,8 +307,8 @@
                     }
                 }
                 img {
-                    width: 8vw !important;
-                    height: 8vw !important;
+                    width: 6vw !important;
+                    height: 6vw !important;
                 }
             }
             .scroll  {
@@ -333,6 +334,10 @@
             padding-left: unset !important;
         }
     }
+}
+
+@media only screen and (max-width: 1000px) {
+
 }
 
 @media only screen and (min-width:1600px) {

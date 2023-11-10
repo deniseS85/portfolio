@@ -10,8 +10,8 @@ header {
     z-index: 999;
     background-color: var(--background);
     img {
-        width: 100px;
-        height: 100px;
+        width: 6.944vw;
+        height: 6.944vw;
         object-fit: contain;
         cursor: pointer;
     }
@@ -168,13 +168,17 @@ header {
     }
 }
 
-@media  only screen and (min-width:2000px) {
+@media only screen and (max-width: 1000px) {
     header {
         img {
-            width: 6.944vw !important;
-            height: 6.944vw !important;
+            width: 80px;
+            height: 80px;
         }
     }
+    
+}
+
+@media  only screen and (min-width:2000px) {
     nav {
         a {
             font-size: 1.597vw !important;
