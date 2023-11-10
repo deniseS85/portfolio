@@ -11,14 +11,6 @@
         </a>
     </nav>
 
-    <!-- <nav [class.nav-responsiv-menu]="navResponsiv.classList.contains('open')">
-        <a (click)="scroll('aboutMe')" routerLink="/aboutMe" routerLinkActive="active" [ngClass]="{'active': currentActive === 1}" (click)="closeMenu()">About me</a>
-        <a (click)="scroll('skills')" routerLink="/skills" routerLinkActive="active" [ngClass]="{'active': currentActive === 2}" (click)="closeMenu()">Skills</a>
-        <a (click)="scroll('portfolio')" routerLink="/portfolio" routerLinkActive="active" [ngClass]="{'active': currentActive === 3}" (click)="closeMenu()">Portfolio</a>
-        <a (click)="scroll('contact')" routerLink="/contact" routerLinkActive="active" [ngClass]="{'active': currentActive === 4}" (click)="closeMenu()">Contact
-        </a>
-    </nav> -->
-
     <div (click)="navResponsiv.classList.toggle('open'); toggleMenu()" class="nav-responsiv" #navResponsiv>
         <span></span>
         <span></span>

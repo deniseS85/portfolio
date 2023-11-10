@@ -237,6 +237,11 @@
     }
 }
 
+@media only screen and (max-width: 700px) {
+    .about-me-content {
+        scroll-margin-top: 10px;
+    }
+}
 
 @media only screen and (max-width: 1000px) {
     .home-content {
@@ -323,7 +328,7 @@
         width: 100% !important;
     }
     .about-me-content {
-        scroll-margin-top: 100px;
+        scroll-margin-top: 20vw;
         .header-about-me-content {
             font-size: 32px !important;
         }
@@ -359,7 +364,7 @@
         }
     }
     .about-me-content {
-        scroll-margin-top: 250px;
+        scroll-margin-top: 199px;
         .present-text, .subinfo-first, .subinfo-second {
             font-size: 30px !important;
         }

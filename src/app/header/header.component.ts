@@ -53,11 +53,11 @@ export class HeaderComponent implements OnInit {
         }
         this.isMenuOpen = !this.isMenuOpen;
 
-        if (this.isMenuOpen) {
+       /*  if (this.isMenuOpen) {
             this.document.body.style.overflow = 'hidden';
         } else {
             this.document.body.style.overflow = 'unset';
-        }
+        } */
     }
 
 
@@ -79,7 +79,7 @@ export class HeaderComponent implements OnInit {
         
         const isAboutActive = !!aboutElement && aboutElement.getBoundingClientRect().top <= 200 && aboutElement.getBoundingClientRect().bottom > 100;
         const isSkillsActive = !!skillElement && skillElement.getBoundingClientRect().top <= 200 && skillElement.getBoundingClientRect().bottom > 100;
-        const isMyWorkActive = !!portfolioElement && !!portfolioElement && portfolioElement.getBoundingClientRect().top <= 200 && portfolioElement.getBoundingClientRect().bottom > 200;
+        const isMyWorkActive = !!portfolioElement && portfolioElement.getBoundingClientRect().top <= 200 && portfolioElement.getBoundingClientRect().bottom > 200;
         const isContactActive = !!contactElement && contactElement.getBoundingClientRect().top <= 200 && contactElement.getBoundingClientRect().bottom > 100;
     
         this.isActiveAbout = isAboutActive;
