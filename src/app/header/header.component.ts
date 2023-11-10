@@ -1,7 +1,7 @@
-import { Component, ElementRef, HostListener, Inject, ViewChild } from '@angular/core';
-import { DOCUMENT, ViewportScroller } from '@angular/common';
+import { Component, ElementRef, HostListener, Inject, OnInit, ViewChild } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { IconsService } from '../icons.service';
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,51 +9,84 @@ import { IconsService } from '../icons.service';
   styleUrls: ['./header.component.scss'],
 })
 
-export class HeaderComponent {
-  constructor(private viewportScroller: ViewportScroller, public is: IconsService, @Inject(DOCUMENT) private document: Document) {}
 
-  currentActive: number = 0;
-  isMenuOpen: boolean = false;
+export class HeaderComponent implements OnInit {
+    isActiveHeader: boolean = false;
+    isActiveAbout: boolean = false;
+    isActiveSkills: boolean = false;
+    isActiveMyWork: boolean = false;
+    isActiveContact: boolean = false;
+    isMenuOpen: boolean = false;
+    isMobileResolution: boolean = false;
+    
+    @ViewChild('navResponsiv') navResponsiv!: ElementRef;
+    
 
-  @ViewChild('navResponsiv') navResponsiv!: ElementRef;
-  
-  toggleBodyScroll(){
-      this.isMenuOpen = this.navResponsiv.nativeElement.classList.contains('open');
-
-      if (this.isMenuOpen) {
-          this.document.body.style.overflow = 'hidden';
-      } else {
-          this.document.body.style.overflow = 'unset';
-      }
-  }
-
-  closeMenu(): void {
-      this.navResponsiv.nativeElement.classList.remove('open');
-      this.isMenuOpen = false;
-  }
+    constructor(public is: IconsService, @Inject(DOCUMENT) private document: Document, public route: ActivatedRoute){}
 
 
-  @HostListener('window:scroll', ['$event'])
-    checkOffsetTop() {
-      
-      if (window.scrollY > 635 && window.scrollY < 1254) {
-          this.currentActive = 1;
-      } else if (window.scrollY > 1255 && window.scrollY < 1851) {
-          this.currentActive = 2;
-      } else if (window.scrollY > 1852 && window.scrollY < 3933) {
-          this.currentActive = 3;
-      } else if (window.scrollY > 3934) {
-          this.currentActive = 4;
-      } else {
-          this.currentActive = 0;
-      }
-  }  
+    /*  */
+    ngOnInit(): void {
+        this.route.fragment.subscribe(fragment => {
+            this.updateActiveSections(fragment);
+        });
+        this.updateActiveSections(this.route.snapshot.fragment);
+    }
 
 
-  public scroll(elementId: string): void { 
-      this.viewportScroller.scrollToAnchor(elementId);
-  }
-  
+    @HostListener('window:resize') onResize(): void {
+      this.updateMobileResolution();
+    }
+
+
+    private updateMobileResolution(): void {
+        this.isMobileResolution = window.innerWidth <= 856;
+        if (!this.isMobileResolution) {
+          this.isMenuOpen = false;
+        }
+    }
+
+
+    toggleMenu(): void {
+        if (!this.isMobileResolution) {
+            return;
+        }
+        this.isMenuOpen = !this.isMenuOpen;
+
+        if (this.isMenuOpen) {
+            this.document.body.style.overflow = 'hidden';
+        } else {
+            this.document.body.style.overflow = 'unset';
+        }
+    }
+
+
+    closeMenu(): void {
+        this.navResponsiv.nativeElement.classList.remove('open');
+        this.isMenuOpen = false;
+    }
+
+    @HostListener('window:scroll') onScroll(): void {
+        this.updateActiveSections(this.route.snapshot.fragment);
+    }
+
+
+    private updateActiveSections(fragment: string | null): void {
+        const aboutElement = this.document.getElementById('aboutMe');
+        const skillElement = this.document.getElementById('skills');
+        const portfolioElement = this.document.getElementById('portfolio');
+        const contactElement = this.document.getElementById('contact');
+        
+        const isAboutActive = !!aboutElement && aboutElement.getBoundingClientRect().top <= 200 && aboutElement.getBoundingClientRect().bottom > 100;
+        const isSkillsActive = !!skillElement && skillElement.getBoundingClientRect().top <= 200 && skillElement.getBoundingClientRect().bottom > 100;
+        const isMyWorkActive = !!portfolioElement && !!portfolioElement && portfolioElement.getBoundingClientRect().top <= 200 && portfolioElement.getBoundingClientRect().bottom > 200;
+        const isContactActive = !!contactElement && contactElement.getBoundingClientRect().top <= 200 && contactElement.getBoundingClientRect().bottom > 100;
+    
+        this.isActiveAbout = isAboutActive;
+        this.isActiveSkills = isSkillsActive;
+        this.isActiveMyWork = isMyWorkActive;
+        this.isActiveContact = isContactActive; 
+    }
 }
 
 

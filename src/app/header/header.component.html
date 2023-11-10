@@ -1,15 +1,25 @@
 <header>
-    <img (click)="scroll('header')" routerLink="/" src="{{ is.logo }}">
-
+    <a href="#">
+        <img src="{{ is.logo }}">
+    </a>
+   
     <nav [class.nav-responsiv-menu]="navResponsiv.classList.contains('open')">
+        <a href="#aboutMe" [class.active]="isActiveAbout"  (click)="closeMenu()">About me</a>
+        <a href="#skills" [class.active]="isActiveSkills" (click)="closeMenu()">Skills</a>
+        <a href="#portfolio" [class.active]="isActiveMyWork" (click)="closeMenu()">Portfolio</a>
+        <a href="#contact"  [class.active]="isActiveContact" (click)="closeMenu()">Contact
+        </a>
+    </nav>
+
+    <!-- <nav [class.nav-responsiv-menu]="navResponsiv.classList.contains('open')">
         <a (click)="scroll('aboutMe')" routerLink="/aboutMe" routerLinkActive="active" [ngClass]="{'active': currentActive === 1}" (click)="closeMenu()">About me</a>
         <a (click)="scroll('skills')" routerLink="/skills" routerLinkActive="active" [ngClass]="{'active': currentActive === 2}" (click)="closeMenu()">Skills</a>
         <a (click)="scroll('portfolio')" routerLink="/portfolio" routerLinkActive="active" [ngClass]="{'active': currentActive === 3}" (click)="closeMenu()">Portfolio</a>
         <a (click)="scroll('contact')" routerLink="/contact" routerLinkActive="active" [ngClass]="{'active': currentActive === 4}" (click)="closeMenu()">Contact
         </a>
-    </nav>
+    </nav> -->
 
-    <div (click)="navResponsiv.classList.toggle('open'); toggleBodyScroll()" class="nav-responsiv" #navResponsiv>
+    <div (click)="navResponsiv.classList.toggle('open'); toggleMenu()" class="nav-responsiv" #navResponsiv>
         <span></span>
         <span></span>
         <span></span>

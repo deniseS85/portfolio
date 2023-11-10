@@ -1,4 +1,4 @@
-<div class="my-skills-container" #myskills>
+<div class="my-skills-container" #myskills id="skills">
     <div class="skills-icons">
         <div class="icons" *ngFor="let skill of skills; let i = index">
             <img #image src="assets/img/{{ skill.icon }}" (mouseenter)="isHover = i" (mouseleave)="isHover = -1"
@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="my-skills">
-        <div id="skills">My skills
+        <div>My skills
             <img class="line-my-skills" src="assets/img/line-my-skills.png">
         </div>
         <div>I have gained experience in building projects with various front end technologies and concepts.</div>

@@ -173,6 +173,7 @@
     position: relative;
     color: var(--white);
     box-sizing: border-box;
+    scroll-margin-top: 180px;
     .scroll-down-shadow {
         position: absolute;
         right: 0;
@@ -322,6 +323,7 @@
         width: 100% !important;
     }
     .about-me-content {
+        scroll-margin-top: 100px;
         .header-about-me-content {
             font-size: 32px !important;
         }
@@ -336,9 +338,6 @@
     }
 }
 
-@media only screen and (max-width: 1000px) {
-
-}
 
 @media only screen and (min-width:1600px) {
     .subinfo-profile {
@@ -360,6 +359,7 @@
         }
     }
     .about-me-content {
+        scroll-margin-top: 250px;
         .present-text, .subinfo-first, .subinfo-second {
             font-size: 30px !important;
         }

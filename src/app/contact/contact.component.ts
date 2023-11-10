@@ -1,7 +1,5 @@
-import { ViewportScroller } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -25,7 +23,7 @@ export class ContactComponent {
     });
 
 
-    constructor(private viewportScroller: ViewportScroller, private fb: FormBuilder, private httpClient: HttpClient) {}
+    constructor(private fb: FormBuilder) {}
   
     async sendMail() {
         if (!this.contactForm.invalid) {
@@ -58,12 +56,6 @@ export class ContactComponent {
         fd.append('message', data.message);
         return fd;
     } 
-
-
-    public scroll(elementId: string): void { 
-        this.viewportScroller.scrollToAnchor(elementId);
-    }
-
 }
 
 

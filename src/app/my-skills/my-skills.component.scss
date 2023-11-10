@@ -4,6 +4,7 @@
     padding: 0 10% 0 8.8%;
     position: relative;
     margin-top: 11%;
+    scroll-margin-top: 180px;
     .skills-icons {
         padding-top: 37px;
         display: flex;
@@ -85,6 +86,7 @@
 @media only screen and (max-width: 1000px) {
     .my-skills-container {
         flex-direction: column-reverse;
+        scroll-margin-top: 100px;
         .skills-icons {
             justify-content: space-evenly;
         }
@@ -121,6 +123,7 @@
         }
     }
     .my-skills-container {
+        scroll-margin-top: 270px;
         .skills-icons {
             .icons {
                 img {
