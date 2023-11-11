@@ -50,7 +50,7 @@
         align-items: center;
         flex-direction: column;
         width: 50%;
-        height: 440px;
+        height: 504px;
         justify-content: space-between;
         position: relative;
         .formfield {
@@ -59,7 +59,8 @@
             flex-direction: column;
             position: relative;   
             .error-box {
-                height: 28px;
+                /* height: 28px; */
+                height: 10px;
                 margin: 0;
             }         
             .error-text {
@@ -146,6 +147,38 @@
             transform-origin: left top;
             pointer-events: none;
             background-color: var(--background);
+        }
+        .checkbox-pivacy-policy {
+            .checkbox-text {
+                display: flex;
+                input {
+                    width: 18px;
+                    height: 18px;
+                }
+                span {
+                    color: var(--white);
+                    font-family: 'Poppins';
+                    font-size: 14px;
+                    margin-left: 10px;
+                }
+                .privacy-link {
+                    color: var(--purple);
+                    margin-left: unset;
+                    cursor: pointer;
+                    &:hover {
+                        border-bottom: 1px solid var(--purple);
+                    }
+                }
+            }
+            .error-box {
+                height: 10px;
+                margin: 0;
+            }  
+            .error-text {
+                font-size: 12px;
+                color: var(--red);
+                margin: 1px 0 10px 5px;
+            }
         }
         .button {
             display: flex;

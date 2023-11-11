@@ -13,6 +13,7 @@ export class ContactComponent {
     minLengthName: number = 3;
     isSubmitted: boolean = false;
     emailSent: boolean = false;
+    isChecked: boolean = false;
     @ViewChild('myForm') myForm!: ElementRef;
     
 
@@ -25,6 +26,10 @@ export class ContactComponent {
 
     constructor(private fb: FormBuilder) {}
   
+    toggleChecked () {
+        this.isChecked = !this.isChecked;
+    }
+
     async sendMail() {
         if (!this.contactForm.invalid) {
             let response = await fetch('https://denise.selfcoders.com/send_mail/send_mail.php',
@@ -45,7 +50,7 @@ export class ContactComponent {
 
         setTimeout(() => {
           this.isSubmitted = false;
-      }, 2000);
+        }, 2000);
     } 
 
     setFormData() {
