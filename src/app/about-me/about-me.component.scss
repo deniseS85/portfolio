@@ -143,25 +143,43 @@
                     }
                 }
             }
-        }
+        }  
         .scroll {
-            display: flex;
-            align-items: center;
-            margin-top: -10vw;
-            writing-mode: vertical-rl;
-            .scroll-info {
-                color: var(--white);
-                font-size: 1.597vw;
-                z-index: 1;
+            transform: translate(-50%, -50%);
+            margin-top: -10.417vw;
+            margin-right: 1.389vw;
+            z-index: 1;
+            span {
+                display: block;
+                width: 1.389vw;
+                height: 1.389vw;
+                border-bottom: 3px solid white;
+                border-right: 3px solid white;
+                transform: rotate(45deg);
+                margin: -10px;
+                animation: animate 2s infinite;
             }
-            img {
-                width: 1.111vw;
-                margin-top: 10px;
-                margin-right: 4px;
-                z-index: 1;
+            span:nth-child(2) {
+                animation-delay: -0.2s;
             }
-        } 
-    }
+            span:nth-child(3) {
+                animation-delay: -0.4s;
+            }
+            @keyframes animate {
+                0% {
+                    opacity: 0;
+                    transform: rotate(45deg) translate(-20px, -20px);
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                    transform: rotate(45deg) translate(20px, 20px);
+                }
+            }
+        }
+    }       
 }
 
 .about-me-content {
@@ -318,7 +336,7 @@
                 }
             }
             .scroll  {
-                img, p { 
+                span { 
                     display: none;
                 }
             }
@@ -361,6 +379,14 @@
         &:hover {
             width: 12.847vw !important;
             height: 4.722vw !important;
+        }
+    }
+    .info-content {
+        .scroll {
+            span {
+                border-bottom: 5px solid white !important;
+                border-right: 5px solid white !important;
+            }
         }
     }
     .about-me-content {
