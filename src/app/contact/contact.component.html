@@ -71,19 +71,22 @@
                 src="assets/img/input-success.png">
         </div>
 
-        <div class="checkbox-pivacy-policy">
+        <div class="checkbox-privacy-policy">
             <div class="checkbox-text">
-                <input type="checkbox" (change)="toggleChecked()">
+                <div class="checkbox" (click)="toggleChecked()">
+                    <div [class.checkbox-selected]="isChecked" #checkboxSelector></div>
+                </div>
                 <span>I've read the
                     <span class="privacy-link" routerLink="/imprint">privacy policy</span> 
                     and agree to the processing of my data as outlined.
                 </span>
             </div>
-            <p *ngIf="(isSubmitted && contactForm.valid) && !isChecked" class="error-text">Please accept the privacy policy.</p>
+            <p *ngIf="(!isChecked && contactForm.valid)" class="error-box" ></p>
+            <p *ngIf="(!isChecked && contactForm.valid && isSubmitted)" class="error-text">Please accept the privacy policy.</p>
         </div>
 
         <div class="button">
-            <button [disabled]="(isSubmitted && emailSent) || (contactForm.invalid && isSubmitted)" type="submit">Send message</button>
+            <button [disabled]="(isSubmitted && emailSent) || (contactForm.invalid && isSubmitted) || (!isChecked && isSubmitted)" type="submit">Send message</button>
         </div>
 
         <div *ngIf="isSubmitted && emailSent" class="popup-bg">

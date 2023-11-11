@@ -15,7 +15,8 @@ export class ContactComponent {
     emailSent: boolean = false;
     isChecked: boolean = false;
     @ViewChild('myForm') myForm!: ElementRef;
-    
+    @ViewChild('checkboxSelector') checkboxSelector!: ElementRef;
+
 
     contactForm = this.fb.group({
         name: ['', [Validators.required, Validators.minLength(this.minLengthName)]],
@@ -31,10 +32,9 @@ export class ContactComponent {
     }
 
     async sendMail() {
-        if (!this.contactForm.invalid) {
+        if (!this.contactForm.invalid && this.isChecked) {
             let response = await fetch('https://denise.selfcoders.com/send_mail/send_mail.php',
                 { method: 'POST', body: this.setFormData() }
-
             );
             if (!response.ok) {
               this.emailSent = false;
@@ -42,6 +42,7 @@ export class ContactComponent {
             } else { 
               this.emailSent = true;
               this.contactForm.reset();
+              this.checkboxSelector.nativeElement.classList.remove('checkbox-selected');
             }
         } else {
               this.emailSent = false;
