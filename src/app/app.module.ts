@@ -9,6 +9,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ImprintComponent } from './imprint/imprint.component';
+import { MyPortfolioPageComponent } from './my-portfolio-page/my-portfolio-page.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MySkillsComponent,
     PortfolioComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ImprintComponent,
+    MyPortfolioPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { MyPortfolioPageComponent } from './my-portfolio-page/my-portfolio-page.component';
 
 
 const routes: Routes = [
-  { path: '', component: HeaderComponent},
+  { path: '', component: MyPortfolioPageComponent},
+  { path: 'imprint', component: ImprintComponent}
 ];
 
 @NgModule({
