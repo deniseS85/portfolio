@@ -12,7 +12,10 @@
                 <div>Denise Siegl</div>
                 <div>FRONTEND DEVELOPER</div>
             </div>
-            <button (click)="scroll('contact')" routerLink="/contact">Let's talk!</button>
+           
+            <button>
+                <a href="#contact">Let's Talk</a>
+            </button>
         </div>
     </div>
 
@@ -24,9 +27,6 @@
             <a *ngFor="let icon of is.infoIcons" href="{{ icon.url }}" target="{{!icon.url.includes('#')  ? '_blank' : '_self'}}">
                 <img src="{{ icon.image }}">
             </a>
-            <p>
-                <img (click)="scroll('contact')" routerLink="/contact">
-            </p>
         </div>
 
         <div class="scroll">

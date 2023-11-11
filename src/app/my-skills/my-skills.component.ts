@@ -1,4 +1,3 @@
-import { ViewportScroller } from '@angular/common';
 import { Component} from '@angular/core';
 
 
@@ -10,8 +9,7 @@ import { Component} from '@angular/core';
 export class MySkillsComponent {
   isHover: any;
  
-
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor() {}
   
   skills = [
     { 
@@ -65,10 +63,4 @@ export class MySkillsComponent {
       color_hover: 'brightness(0) saturate(100%) invert(84%) sepia(0%) saturate(666%) hue-rotate(354deg) brightness(93%) contrast(79%)' 
     },
   ];
-
-  
-  
-  public scroll(elementId: string): void { 
-    this.viewportScroller.scrollToAnchor(elementId);
-  }
 }
