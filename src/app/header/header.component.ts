@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
     isActiveMyWork: boolean = false;
     isActiveContact: boolean = false;
     isMenuOpen: boolean = false;
-    isMobileResolution: boolean = false;
     
     @ViewChild('navResponsiv') navResponsiv!: ElementRef;
     
@@ -25,7 +24,6 @@ export class HeaderComponent implements OnInit {
     constructor(public is: IconsService, @Inject(DOCUMENT) private document: Document, public route: ActivatedRoute){}
 
 
-    /*  */
     ngOnInit(): void {
         this.route.fragment.subscribe(fragment => {
             this.updateActiveSections(fragment);
@@ -34,37 +32,17 @@ export class HeaderComponent implements OnInit {
     }
 
 
-    @HostListener('window:resize') onResize(): void {
-      this.updateMobileResolution();
-    }
-
-
-    private updateMobileResolution(): void {
-        this.isMobileResolution = window.innerWidth <= 856;
-        if (!this.isMobileResolution) {
-          this.isMenuOpen = false;
-        }
-    }
-
-
     toggleMenu(): void {
-        if (!this.isMobileResolution) {
-            return;
-        }
-        this.isMenuOpen = !this.isMenuOpen;
-
-       /*  if (this.isMenuOpen) {
-            this.document.body.style.overflow = 'hidden';
-        } else {
-            this.document.body.style.overflow = 'unset';
-        } */
+        this.isMenuOpen = this.navResponsiv.nativeElement.classList.contains('open');
     }
 
 
     closeMenu(): void {
-        this.navResponsiv.nativeElement.classList.remove('open');
         this.isMenuOpen = false;
+        this.navResponsiv.nativeElement.classList.remove('open');
+       /*  this.document.body.style.position = 'unset'; */
     }
+
 
     @HostListener('window:scroll') onScroll(): void {
         this.updateActiveSections(this.route.snapshot.fragment);
