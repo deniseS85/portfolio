@@ -4,23 +4,54 @@
     justify-content: center;
     padding: 0 10%;
     font-family: 'Poppins', sans-serif;
-
     .content {
         width: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
         color: #fff;
-        margin-top: 140px;
+        margin-top: 10vw;
         gap: 10px;
+        .imprint-title {
+            font-size: 6.25vw;
+        }
         a {
             text-decoration: none;
             color: var(--purple);
             cursor: pointer;
         }
-
-        p {
+        p, .privacy {
             margin: 6px;
+            font-size: 16px;
+        }
+        h2 {
+            font-size: 3vw;
         }
     }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .imprint {
+        .content {
+            margin-top: 20vw !important;
+            .imprint-title {
+                font-size: 32px !important;
+            }
+            h2 {
+                font-size: 25px !important;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .imprint {
+        .content {
+            p, .privacy {
+                font-size: 30px !important;
+            }
+        }
+    }
+    
 }
