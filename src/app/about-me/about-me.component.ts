@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IconsService } from '../icons.service';
 
 
@@ -11,12 +11,7 @@ import { IconsService } from '../icons.service';
 
 
 export class AboutMeComponent {
-  nativeElement: any;
+/*   nativeElement: any; */
  
   constructor(public is: IconsService) {}
-
-  ngOnInit(): void {
-  
-  }
-
 }

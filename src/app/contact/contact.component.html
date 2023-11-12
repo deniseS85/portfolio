@@ -1,10 +1,10 @@
-<div class="contact" id="contact" #contact>
+<div class="contact" id="contact" #contact data-aos="zoom-in">
     <img src="assets/img/line-contact.png">
     <div>Contact</div>
 </div>
 
 <div class="contact-content">
-    <div class="content-left">
+    <div class="content-left" data-aos="zoom-in"  data-aos-anchor-placement="top-center">
         <div>Got a problem to solve?</div>
         <div>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</div>
         <div>Need a Frontend developer? 
@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <form [formGroup]="contactForm" (submit)="sendMail()" #myForm>
+    <form [formGroup]="contactForm" (submit)="sendMail()" #myForm data-aos="zoom-in"  data-aos-anchor-placement="top-center">
         <div class="formfield">
             <input type="name" placeholder=" " formControlName="name"
                 [class.error-border]="(contactForm.get('name')?.hasError('required') && isSubmitted && !emailSent) ||

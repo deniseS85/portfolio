@@ -1,6 +1,6 @@
 <div class="my-skills-container" #myskills id="skills">
     <div class="skills-icons">
-        <div class="icons" *ngFor="let skill of skills; let i = index">
+        <div data-aos="flip-left" data-aos-anchor-placement="top-center" class="icons" *ngFor="let skill of skills; let i = index">
             <img #image src="assets/img/{{ skill.icon }}" (mouseenter)="isHover = i" (mouseleave)="isHover = -1"
             [style.filter]="isHover == i ? skill.color_hover : ''">
             <div>{{ skill.name }}</div>

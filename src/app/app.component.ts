@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as AOS from 'aos';
 
 
 @Component({
@@ -9,7 +10,18 @@ import { Router } from '@angular/router';
 })
 
 
-export class AppComponent {
+export class AppComponent implements OnInit {
+  title = 'portfolio';
+
+  constructor(public router: Router) {}
+
+  ngOnInit(): void {
+    AOS.init({
+      duration: 1000
+    });
+
+  }
+
 
   onActivate(event:any) {
       window.scroll({ 
@@ -18,9 +30,7 @@ export class AppComponent {
         behavior: 'smooth'
       });
   }
-  title = 'portfolio';
-
-  constructor(public router: Router) {}
+ 
 }
 
 
