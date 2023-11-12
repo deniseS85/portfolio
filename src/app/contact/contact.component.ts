@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -14,10 +14,18 @@ export class ContactComponent {
     isSubmitted: boolean = false;
     emailSent: boolean = false;
     isChecked: boolean = false;
+    messageErrorText = '';
+
+    /* Your message should have at least 20 letters */
+    
     @ViewChild('myForm') myForm!: ElementRef;
     @ViewChild('checkboxSelector') checkboxSelector!: ElementRef;
+    
+    @HostListener('window:resize') onResize(): void {      
+        this.messageErrorText = window.innerWidth <= 354 ? 'Please write at least 20 letters' : ' Your message should have at least 20 letters';
+    }
 
-
+    
     contactForm = this.fb.group({
         name: ['', [Validators.required, Validators.minLength(this.minLengthName)]],
         email: ['', [Validators.required, Validators.email]],

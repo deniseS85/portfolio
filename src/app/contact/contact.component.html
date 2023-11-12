@@ -20,11 +20,13 @@
                 [class.succes-border]="contactForm.get('name')?.valid">
             <label [class.success-label]="contactForm.get('name')?.valid">Your name</label>
 
-            <p *ngIf="contactForm.get('name')?.valid && isSubmitted && !emailSent" class="error-box"></p>
-            <p *ngIf="(contactForm.get('name')?.hasError('required') && isSubmitted && !emailSent) ||
+            <p class="error-box">
+                <span *ngIf="(contactForm.get('name')?.hasError('required') && isSubmitted && !emailSent) ||
                 (contactForm.get('name')?.hasError('minlength') && isSubmitted && !emailSent)" 
                 class="error-text">Your name should have at least 3 letters
+                </span>
             </p>
+            
             <img *ngIf="(contactForm.get('name')?.hasError('required') && isSubmitted && !emailSent) ||
                 (contactForm.get('name')?.hasError('minlength') && isSubmitted && !emailSent)"  
                 src="assets/img/input-error.png">
@@ -39,11 +41,14 @@
                 [class.succes-border]="contactForm.get('email')?.valid">
             <label [class.success-label]="contactForm.get('email')?.valid">Your email</label>
 
-            <p *ngIf="contactForm.get('email')?.valid && isSubmitted" class="error-box"></p>
-            <p *ngIf="(contactForm.get('email')?.hasError('required') && isSubmitted && !emailSent) ||
+            <p class="error-box">
+                <span  
+                *ngIf="(contactForm.get('email')?.hasError('required') && isSubmitted && !emailSent) ||
                 (contactForm.get('email')?.hasError('email') && isSubmitted && !emailSent)" 
                 class="error-text">Your email is not valid
+                </span>
             </p>
+           
             <img *ngIf="(contactForm.get('email')?.hasError('required') && isSubmitted && !emailSent) ||
                 (contactForm.get('email')?.hasError('email') && isSubmitted && !emailSent)" 
                 src="assets/img/input-error.png">
@@ -59,10 +64,12 @@
             </textarea>
             <label [class.success-label]="contactForm.get('message')?.valid">Your message</label>
 
-            <p *ngIf="contactForm.get('message')?.valid && isSubmitted && !emailSent" class="error-box"></p>
-            <p *ngIf="(contactForm.get('message')?.hasError('required') && isSubmitted && !emailSent) ||
-                (contactForm.get('message')?.hasError('minlength') && isSubmitted && !emailSent)" 
-                class="error-text">Your message should have at least 20 letters
+            <p class="error-box">
+                <span 
+                    *ngIf="(contactForm.get('message')?.hasError('required') && isSubmitted && !emailSent) ||
+                    (contactForm.get('message')?.hasError('minlength') && isSubmitted && !emailSent)" 
+                    class="error-text">{{messageErrorText}}
+                </span>
             </p>
             <img *ngIf="(contactForm.get('message')?.hasError('required') && isSubmitted && !emailSent) ||
                 (contactForm.get('message')?.hasError('minlength') && isSubmitted && !emailSent)" 
@@ -81,10 +88,14 @@
                     and agree to the processing of my data as outlined.
                 </span>
             </div>
-            <p *ngIf="(!isChecked && contactForm.valid)" class="error-box" ></p>
-            <p *ngIf="(!isChecked && contactForm.valid && isSubmitted)" class="error-text">Please accept the privacy policy.</p>
-        </div>
 
+            <p class="error-box">
+                <span
+                    *ngIf="(!isChecked && contactForm.valid && isSubmitted)" class="error-text">Please accept the privacy policy.
+                </span>
+            </p>
+        </div>
+    
         <div class="button">
             <button [disabled]="(isSubmitted && emailSent) || (contactForm.invalid && isSubmitted) || (!isChecked && isSubmitted)" type="submit">Send message</button>
         </div>

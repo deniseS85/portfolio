@@ -27,20 +27,22 @@
             object-fit: contain;
             cursor: pointer;
         }
-        div {
-            text-align: center;
-            cursor: pointer;
-            /* &:hover {
-                transition: 0.5s;
-            } */
-            &:hover::after {
-                content: '';
-                display: block;
-                position: relative;
-                width: 50px;
-                margin-bottom: -2px;
-                border-bottom: 2px solid var(--light-blue);
-            }
+        .logo-link {
+            div {
+                text-align: center;
+                cursor: pointer;
+                &:hover {
+                    transition: 0.5s;
+                }
+                &:hover::after {
+                    content: '';
+                    display: block;
+                    position: relative;
+                    width: 50px;
+                    margin-bottom: -2px;
+                    border-bottom: 2px solid var(--light-blue);
+                }
+            } 
         }
     }
     .content-middle {
@@ -124,14 +126,16 @@
 @media only screen and (min-width: 2000px) {
     .footer {
         .content-left {
-            div {
-                font-size: 30px !important;
-                margin-bottom: 20px !important;
-                padding-bottom: 3.9px;
-                &:hover::after {
-                    border-bottom: 5px solid var(--light-blue);
-                    margin-bottom: -5px !important;
-                    width: 70px;
+            .logo-link {
+                div {
+                    font-size: 30px !important;
+                    margin-bottom: 20px !important;
+                    padding-bottom: 3.9px;
+                    &:hover::after {
+                        border-bottom: 5px solid var(--light-blue);
+                        margin-bottom: -5px !important;
+                        width: 70px;
+                    }
                 }
             }
         }

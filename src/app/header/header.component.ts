@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Inject, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Inject, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { IconsService } from '../icons.service';
 import { ActivatedRoute } from '@angular/router';
@@ -19,7 +19,6 @@ export class HeaderComponent implements OnInit {
     isMenuOpen: boolean = false;
     
     @ViewChild('navResponsiv') navResponsiv!: ElementRef;
-    
 
     constructor(public is: IconsService, @Inject(DOCUMENT) private document: Document, public route: ActivatedRoute){}
 

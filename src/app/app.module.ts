@@ -34,4 +34,5 @@ import { MyPortfolioPageComponent } from './my-portfolio-page/my-portfolio-page.
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}

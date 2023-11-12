@@ -7,9 +7,16 @@ import { IconsService } from '../icons.service';
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss']
 })
+
+
+
 export class AboutMeComponent {
   nativeElement: any;
-
+ 
   constructor(public is: IconsService) {}
+
+  ngOnInit(): void {
+  
+  }
 
 }

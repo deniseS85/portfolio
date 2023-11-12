@@ -50,3 +50,17 @@ body {
     --turquoise: #1CDAE6;
 }
 
+
+@keyframes scaleProgress {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+}
+.scroll-animation {
+    animation: scaleProgress auto linear;
+}
+
+
