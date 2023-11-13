@@ -1,14 +1,13 @@
 <div class="portfolio-container" #myportfolio id="portfolio">
-    <div data-aos="zoom-in" data-aos-anchor-placement="top-center" class="headline-portfolio">
+    <div data-aos="zoom-in" data-aos-offset="200" class="headline-portfolio">
         <div></div>
-        <!-- <img src="assets/img/line-left-portfolio.png"> -->
         <span>Portfolio</span>
     </div>
 
-    <div data-aos="zoom-in" data-aos-anchor-placement="top-center" class="subtext-portfolio">This page is a sample of my work - please feel free to try them out.</div>
+    <div data-aos="zoom-in" data-aos-offset="200" class="subtext-portfolio">This page is a sample of my work - please feel free to try them out.</div>
 
     <div *ngFor="let project of projects; let i = index">
-        <div data-aos="fade-right" data-aos-anchor-placement="top-center" class="project" *ngIf="i % 2 == 0">
+        <div data-aos="slide-right" data-aos-offset="200" class="project" *ngIf="i % 2 == 0">
             <img src="{{ project.image }}">
             <div class="content-right">
                 <div>{{ project.title }}</div>
@@ -25,7 +24,7 @@
             </div>
         </div>
 
-        <div data-aos="fade-left" data-aos-anchor-placement="top-center" class="project" *ngIf="i % 2 != 0">
+        <div data-aos="slide-left" data-aos-offset="200" class="project" *ngIf="i % 2 != 0">
             <div class="content-left">
                 <div>{{ project.title }}</div>
                 <div>{{ project.languages }}</div>

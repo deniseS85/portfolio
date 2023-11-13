@@ -1,17 +1,18 @@
 <div class="my-skills-container" #myskills id="skills">
     <div class="skills-icons">
-        <div data-aos="flip-left" data-aos-anchor-placement="top-center" class="icons" *ngFor="let skill of skills; let i = index">
+        <div data-aos="flip-left" data-aos-offset="160" class="icons" *ngFor="let skill of skills; let i = index">
             <img #image src="assets/img/{{ skill.icon }}" (mouseenter)="isHover = i" (mouseleave)="isHover = -1"
             [style.filter]="isHover == i ? skill.color_hover : ''">
             <div>{{ skill.name }}</div>
         </div>
     </div>
     <div class="my-skills">
-        <div>My skills
+        <div>
+            <div data-aos="zoom-in" data-aos-offset="200">My skills</div>
             <img class="line-my-skills" src="assets/img/line-my-skills.png">
         </div>
-        <div>I have gained experience in building projects with various front end technologies and concepts.</div>
-        <button>
+        <div data-aos="zoom-in" data-aos-offset="200">I have gained experience in building projects with various front end technologies and concepts.</div>
+        <button data-aos="zoom-in" data-aos-offset="200">
             <a href="#contact">Get in touch</a>
         </button>
     </div>

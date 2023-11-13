@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, ElementRef, ViewChild} from '@angular/core';
 
 
 @Component({
@@ -8,9 +8,11 @@ import { Component} from '@angular/core';
 })
 export class MySkillsComponent {
   isHover: any;
- 
+  
+
   constructor() {}
   
+
   skills = [
     { 
       name: 'Angular', 

@@ -4,7 +4,7 @@
 </div>
 
 <div class="contact-content">
-    <div class="content-left" data-aos="zoom-in"  data-aos-anchor-placement="top-center">
+    <div class="content-left" data-aos="zoom-in" data-aos-offset="200">
         <div>Got a problem to solve?</div>
         <div>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</div>
         <div>Need a Frontend developer? 
@@ -12,8 +12,8 @@
         </div>
     </div>
 
-    <form [formGroup]="contactForm" (submit)="sendMail()" #myForm data-aos="zoom-in"  data-aos-anchor-placement="top-center">
-        <div class="formfield">
+    <form [formGroup]="contactForm" (submit)="sendMail()" #myForm>
+        <div class="formfield" data-aos="zoom-in" data-aos-offset="200">
             <input type="name" placeholder=" " formControlName="name"
                 [class.error-border]="(contactForm.get('name')?.hasError('required') && isSubmitted && !emailSent) ||
                 (contactForm.get('name')?.hasError('minlength') && isSubmitted && !emailSent)"
@@ -34,7 +34,7 @@
                 src="assets/img/input-success.png">
         </div>
 
-        <div class="formfield">
+        <div class="formfield" data-aos="zoom-in" data-aos-offset="200">
             <input type="email" placeholder=" " formControlName="email"
                 [class.error-border]="(contactForm.get('email')?.hasError('required') && isSubmitted && !emailSent) ||
                 (contactForm.get('email')?.hasError('email') && isSubmitted && !emailSent)"
@@ -56,7 +56,7 @@
                 src="assets/img/input-success.png">
         </div>
 
-        <div class="formfield">
+        <div class="formfield" data-aos="zoom-in" data-aos-offset="200">
             <textarea placeholder=" "  formControlName="message"
                 [class.error-border]="(contactForm.get('message')?.hasError('required') && isSubmitted && !emailSent) ||
                 (contactForm.get('message')?.hasError('minlength') && isSubmitted && !emailSent)"
@@ -78,7 +78,7 @@
                 src="assets/img/input-success.png">
         </div>
 
-        <div class="checkbox-privacy-policy">
+        <div class="checkbox-privacy-policy" data-aos="zoom-in" data-aos-offset="200">
             <div class="checkbox-text">
                 <div class="checkbox" (click)="toggleChecked()">
                     <div [class.checkbox-selected]="isChecked" #checkboxSelector></div>
@@ -96,7 +96,7 @@
             </p>
         </div>
     
-        <div class="button">
+        <div class="button" data-aos="zoom-in" data-aos-offset="200">
             <button [disabled]="(isSubmitted && emailSent) || (contactForm.invalid && isSubmitted) || (!isChecked && isSubmitted)" type="submit">Send message</button>
         </div>
 

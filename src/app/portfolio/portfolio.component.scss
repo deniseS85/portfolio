@@ -22,6 +22,7 @@
     margin-bottom: 11%;
     margin-top: 11%;
     scroll-margin-top: 180px;
+    overflow: hidden;
     .headline-portfolio {
         display: flex;
         flex-direction: column;
@@ -93,9 +94,11 @@
                 @include buttonStyle();
                 margin-right: 50px;
                 margin-left: 0;
-                &:hover {
-                    background-color: var(--light-blue);
-                    transition: 0.2s ease-in;
+                @media (hover: hover){
+                    &:hover {
+                        background-color: var(--light-blue);
+                        transition: 0.2s ease-in;
+                    }
                 }
             }
             .button-left, button {
@@ -106,8 +109,10 @@
             .github-btn {
                 background-color: var(--background);
                 border: 1px solid var(--light-blue);
-                &:hover {
-                    background-color: var(--light-blue);
+                @media (hover: hover){
+                    &:hover {
+                        background-color: var(--light-blue);
+                    }
                 }
             }
         }
@@ -118,8 +123,8 @@
         width: 30%;
     }
     .shadow-left {
-        top: 75vw;
-        left: 0;
+        top: 32vw;
+        left: -69px;
     }
     .shadow-right {
         top: 63vw;
@@ -167,7 +172,19 @@
                 }
             }
         }
+        .shadow-left {
+            left: 0;
+        }
     } 
+}
+
+@media only screen and (min-width: 1110px) {
+    .portfolio-container {
+        .shadow-right {
+            top: 40vw;
+        }
+    }
+    
 }
 
 @media only screen and (min-width: 2000px) {
@@ -192,6 +209,9 @@
                     font-size: 30px !important;
                 }
             }
+        }
+        .shadow-left {
+            left: -200px;
         }
     }
 }

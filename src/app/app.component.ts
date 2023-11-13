@@ -12,14 +12,14 @@ import * as AOS from 'aos';
 
 export class AppComponent implements OnInit {
   title = 'portfolio';
+  
 
   constructor(public router: Router) {}
 
   ngOnInit(): void {
-    AOS.init({
-      duration: 1000
-    });
-
+      AOS.init({
+        duration: 1000,
+      });
   }
 
 
