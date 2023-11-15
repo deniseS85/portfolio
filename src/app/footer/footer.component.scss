@@ -32,6 +32,7 @@
                 text-align: center;
                 cursor: pointer;
                 white-space: nowrap;
+                font-size: 16px;
                 @media (hover: hover){
                     &:hover {
                         transition: 0.5s;
@@ -40,7 +41,7 @@
                         content: '';
                         display: block;
                         position: relative;
-                        width: 138px;
+                        width: 90px;
                         margin-bottom: -2px;
                         border-bottom: 2px solid var(--light-blue);
                     }
