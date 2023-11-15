@@ -28,7 +28,7 @@ export class PortfolioComponent {
         image: 'assets/img/pokedex-photo.png', 
         title: 'Pokédex', 
         languages: 'JavaScript | HTML | CSS | Api', 
-        description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.', 
+        description: 'Based on the PokéAPI, a simple library that provides and catalogues pokemon information.', 
         linkLiveTest: 'https://denise.selfcoders.com/pokedex/',
         linkGitHub: 'https://github.com/deniseS85/Pokedex' 
       },

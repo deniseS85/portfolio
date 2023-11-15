@@ -167,16 +167,19 @@
                         cursor: pointer;           
                     }
                 }
-                span {
+                .text-imprint {
                     color: var(--white);
                     font-family: 'Poppins';
                     font-size: 14px;
                     margin-left: 10px;
+                    text-decoration: none;
+                    cursor: pointer;
                 }
                 .privacy-link {
                     color: var(--purple);
                     margin-left: unset;
                     cursor: pointer;
+                    text-decoration: none;
                     @media (hover: hover){
                         &:hover {
                             border-bottom: 1px solid var(--purple);

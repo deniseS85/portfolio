@@ -31,6 +31,7 @@
             div {
                 text-align: center;
                 cursor: pointer;
+                white-space: nowrap;
                 @media (hover: hover){
                     &:hover {
                         transition: 0.5s;
@@ -39,7 +40,7 @@
                         content: '';
                         display: block;
                         position: relative;
-                        width: 50px;
+                        width: 138px;
                         margin-bottom: -2px;
                         border-bottom: 2px solid var(--light-blue);
                     }
@@ -138,7 +139,7 @@
                     &:hover::after {
                         border-bottom: 5px solid var(--light-blue);
                         margin-bottom: -5px !important;
-                        width: 70px;
+                        width: 180px;
                     }
                 }
             }
