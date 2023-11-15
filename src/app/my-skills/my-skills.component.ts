@@ -60,7 +60,7 @@ export class MySkillsComponent {
       color_hover: 'brightness(0) saturate(100%) invert(39%) sepia(60%) saturate(681%) hue-rotate(161deg) brightness(97%) contrast(92%)' 
     },
     { 
-      name: 'Material', 
+      name: 'Material Design', 
       icon: 'material-design-icon.png',
       color_hover: 'brightness(0) saturate(100%) invert(84%) sepia(0%) saturate(666%) hue-rotate(354deg) brightness(93%) contrast(79%)' 
     },

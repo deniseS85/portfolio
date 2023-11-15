@@ -29,16 +29,19 @@ body {
 @font-face {
     font-family: 'Poppins';
     src: url('assets/fonts/Poppins/Poppins-Regular.ttf');
+    font-display: block;
 }
 
 @font-face {
     font-family: 'Poppins bold';
     src: url('assets/fonts/Poppins/Poppins-Bold.ttf');
+    font-display: block;
 }
 
 @font-face {
     font-family: 'Poppins semibold';
     src: url('assets/fonts/Poppins/Poppins-SemiBold.ttf');
+    font-display: block;
 }
 
 :root {
@@ -51,7 +54,7 @@ body {
     --turquoise: #1CDAE6;
 }
 
-
+/* 
 @keyframes scaleProgress {
     0% {
       transform: scaleX(0);
@@ -62,7 +65,7 @@ body {
 }
 .scroll-animation {
     animation: scaleProgress auto linear;
-}
+} */
 
 
 

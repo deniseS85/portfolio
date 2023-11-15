@@ -78,7 +78,7 @@
                 src="assets/img/input-success.png">
         </div>
 
-        <div class="checkbox-privacy-policy" data-aos="zoom-in" data-aos-offset="200">
+        <div class="checkbox-privacy-policy" data-aos="zoom-in" data-aos-offset="40">
             <div class="checkbox-text">
                 <div class="checkbox" (click)="toggleChecked()">
                     <div [class.checkbox-selected]="isChecked" #checkboxSelector></div>
@@ -96,7 +96,7 @@
             </p>
         </div>
     
-        <div class="button" data-aos="zoom-in" data-aos-offset="200">
+        <div class="button" data-aos="zoom-in" data-aos-offset="10">
             <button [disabled]="(isSubmitted && emailSent) || (contactForm.invalid && isSubmitted) || (!isChecked && isSubmitted)" type="submit">Send message</button>
         </div>
 
