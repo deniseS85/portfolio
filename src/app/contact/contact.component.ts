@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-contact',
@@ -34,7 +35,8 @@ export class ContactComponent {
     });
 
 
-    constructor(private fb: FormBuilder, private router: Router) {}
+    constructor(private fb: FormBuilder) {
+    }
   
     toggleChecked () {
         this.isChecked = !this.isChecked;
@@ -70,7 +72,7 @@ export class ContactComponent {
         fd.append('email', data.email);
         fd.append('message', data.message);
         return fd;
-    } 
+    }
 }
 
 

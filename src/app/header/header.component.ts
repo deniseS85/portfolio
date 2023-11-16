@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Inject, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
+import { Component, ElementRef, HostListener, Inject, OnInit, ViewChild } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { IconsService } from '../icons.service';
 import { ActivatedRoute } from '@angular/router';
@@ -39,7 +39,6 @@ export class HeaderComponent implements OnInit {
     closeMenu(): void {
         this.isMenuOpen = false;
         this.navResponsiv.nativeElement.classList.remove('open');
-       /*  this.document.body.style.position = 'unset'; */
     }
 
 

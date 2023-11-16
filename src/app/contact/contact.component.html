@@ -83,10 +83,10 @@
                 <div class="checkbox" (click)="toggleChecked()">
                     <div [class.checkbox-selected]="isChecked" #checkboxSelector></div>
                 </div>
-                <a class="text-imprint" routerLink="/imprint" target="_blank">I've read the
-                    <span class="privacy-link">privacy policy</span> 
+                <span class="text-imprint" (click)="toggleChecked()">I've read the
+                    <a class="privacy-link" routerLink="/imprint">privacy policy</a> 
                     and agree to the processing of my data as outlined.
-                </a>
+                </span>
             </div>
 
             <p class="error-box">

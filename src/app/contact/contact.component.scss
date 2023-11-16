@@ -172,10 +172,10 @@
                     font-family: 'Poppins';
                     font-size: 14px;
                     margin-left: 10px;
-                    text-decoration: none;
                     cursor: pointer;
                 }
                 .privacy-link {
+                    font-size: 14px;
                     color: var(--purple);
                     margin-left: unset;
                     cursor: pointer;
@@ -391,7 +391,7 @@
             .checkbox-privacy-policy {
                 .checkbox-text {
                     align-items: center;
-                    span {
+                    .privacy-link, .text-imprint {
                         font-size: 20px;
                     }
                 }

@@ -5,8 +5,8 @@ import { MyPortfolioPageComponent } from './my-portfolio-page/my-portfolio-page.
 
 
 const routes: Routes = [
-  { path: '', component: MyPortfolioPageComponent},
-  { path: 'imprint', component: ImprintComponent}
+  { path: '', component: MyPortfolioPageComponent },
+  { path: 'imprint', component: ImprintComponent }
 ];
 
 @NgModule({
