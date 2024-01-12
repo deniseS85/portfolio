@@ -25,21 +25,13 @@ export class PortfolioComponent {
         linkGitHub: 'https://github.com/deniseS85/El-Pollo-Loco' 
       },
       { 
-        image: 'assets/img/pokedex-photo.png', 
-        title: 'Pokédex', 
-        languages: 'JavaScript | HTML | CSS | Api', 
-        description: 'Based on the PokéAPI, a simple library that provides and catalogues pokemon information.', 
-        linkLiveTest: 'https://denise.selfcoders.com/pokedex/',
-        linkGitHub: 'https://github.com/deniseS85/Pokedex' 
-      },
-      /* { 
-        image: 'assets/img/crm-photo.png', 
+        image: 'assets/img/crm-photo.png',
         title: 'Simple CRM', 
         languages: 'Angular | Firebase', 
-        description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
-        linkLiveTest: '',
-        linkGitHub: 'https://github.com/deniseS85/Pokedex'
-    }, */
+        description: 'A very Simple Customer Relationship Management system working with CRUD functionality.', 
+        linkLiveTest: 'https://denise.selfcoders.com/simple-crm/',
+        linkGitHub: 'https://github.com/deniseS85/Simple_CRM' 
+      },
       { 
         image: 'assets/img/einkaufsliste-photo.png', 
         title: 'Shopping List', 
