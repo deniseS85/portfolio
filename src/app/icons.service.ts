@@ -23,7 +23,7 @@ export class IconsService {
     },
     {
       image: 'assets/img/mail.png',
-      url: 'mailto:denisabel78@hotmail.de'
+      url: 'mailto:denise.siegl@outlook.com'
     }
   ]
 }

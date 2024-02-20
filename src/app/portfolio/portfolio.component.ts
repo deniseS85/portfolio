@@ -19,7 +19,7 @@ export class PortfolioComponent {
       { 
         image: 'assets/img/pollo_loco-photo.png', 
         title: 'El Pollo Loco', 
-        languages: 'JavaScript | HTML | CSS', 
+        languages: 'JavaScript | OOP | HTML | CSS', 
         description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and bottles to fight against the chicken boss.',
         linkLiveTest: 'https://denise.selfcoders.com/el_pollo_loco/',
         linkGitHub: 'https://github.com/deniseS85/El-Pollo-Loco' 
@@ -27,18 +27,18 @@ export class PortfolioComponent {
       { 
         image: 'assets/img/crm-photo.png',
         title: 'Simple CRM', 
-        languages: 'Angular | Firebase', 
+        languages: 'Angular | TypeScript | Firebase', 
         description: 'A very Simple Customer Relationship Management system working with CRUD functionality.', 
         linkLiveTest: 'https://denise.selfcoders.com/simple-crm/',
         linkGitHub: 'https://github.com/deniseS85/Simple_CRM' 
       },
       { 
         image: 'assets/img/einkaufsliste-photo.png', 
-        title: 'Shopping List', 
-        languages: 'JavaScript | HTML | CSS', 
-        description: 'A personalised shopping list that allows you to quickly and easily select, modify and move products to the shopping basket by clicking on the product image. These can be sent directly via Whatsapp.', 
-        linkLiveTest: 'https://denise.selfcoders.com/einkaufsliste/',
-        linkGitHub: 'https://github.com/deniseS85/Einkaufsliste'
+        title: 'DA Bubble', 
+        languages: 'Angular | TypeScript | Firebase', 
+        description: 'Chat messenger inspired by Slack. Contact your colleagues and exchange ideas with them.', 
+        linkLiveTest: 'https://denise.selfcoders.com/dabubble/',
+        linkGitHub: 'https://github.com/deniseS85/DABubble'
       },
   ];
 }
