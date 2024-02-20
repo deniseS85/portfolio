@@ -33,7 +33,7 @@ export class PortfolioComponent {
         linkGitHub: 'https://github.com/deniseS85/Simple_CRM' 
       },
       { 
-        image: 'assets/img/einkaufsliste-photo.png', 
+        image: 'assets/img/dabubble-photo.png', 
         title: 'DA Bubble', 
         languages: 'Angular | TypeScript | Firebase', 
         description: 'Chat messenger inspired by Slack. Contact your colleagues and exchange ideas with them.', 
